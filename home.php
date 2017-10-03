@@ -22,6 +22,7 @@
 	<!-- Fixed navbar -->
 	<?php include("header.php"); ?>
 
+	
 	<div class="container">
 
 	  <!-- Page Heading -->
