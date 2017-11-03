@@ -11,10 +11,13 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/home2.css" rel="stylesheet">
+	<link href="css/home.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
 	<link href="css/sticky-footer-navbar.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
@@ -24,63 +27,112 @@
 
 	
 	<div class="container">
-
-	  <!-- Page Heading -->
-		<h2 class="my-4"> Vendredi 10 Avril </h2>
-
-		
-		<div class="row">
-			<div class="col-md-3">
-				<p> 9:30 </p>
-			</div>
-			<div class="col-md-5">
-				<h3>Pause café inter-services</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-				<a class="btn btn-primary" href="#">View Project</a>
-			</div>
-		</div>
-		
-		<hr>
-		
-		<div class="row">
-			<div class="col-md-3">
-				<p> 10:30 </p>
-			</div>
-			<div class="col-md-5">
-				<h3>Raclette ?</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-				<a class="btn btn-primary" href="#">View Project</a>
-			</div>
-		</div>
-		
-		<hr>
-		
-		<br>
-		<h2 class="my-4"> Lundi 13 Avril </h2>
-		<div class="row">
-			<div class="col-md-3">
-				<p> 9:00 </p>
-			</div>
-			<div class="col-md-5">
-				<h3>Pétanque</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-				<a class="btn btn-primary" href="#">View Project</a>
-			</div>
-		</div>
-		
-		<hr>
-		
-		<div class="row">
-			<div class="col-md-3">
-				<p> 12:45 </p>
-			</div>
-			<div class="col-md-5">
-				<h3>MacDo</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-				<a class="btn btn-primary" href="#">View Project</a>
-			</div>
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-5 text">
+			<h1><strong>ZZ_Agenda</strong></h1>
 		</div>
 	</div>
+
+	<br>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th style="text-align:left">Horaire</th>
+				<th style="text-align:left">Details</th>
+				<th style="text-align:left"></th>
+
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="text-align:left"><span class="	glyphicon glyphicon-time"></span> 09h00</td>
+				<td style="text-align:left">
+					<table>
+						<tr>
+							<td><strong> <span class="	glyphicon glyphicon-pencil"></span>  Titre        :    </strong></td>
+							<td> Emergence du web</td>
+
+						</tr>
+						<tr>
+							<td><strong><span class="	glyphicon glyphicon-map-marker"></span>   Localisation  :  </strong></td>
+							<td> ISIMA</td>
+
+						</tr>
+
+						<tr>
+							<td><strong><span class="	glyphicon glyphicon-user"></span>   Intervenants  : </strong></td>
+							<td> Said EL FARKH</td>
+
+						</tr>
+
+
+					</table>
+				</td>
+				<td> <span class="glyphicon glyphicon-heart " style="font-size:48px;color:red ;text-shadow:2px 2px 4px #000000;"></span></td>
+			</tr>
+
+			<tr>
+				<td style="text-align:left"><span class="	glyphicon glyphicon-time"></span> 09h00</td>
+				<td style="text-align:left">
+					<table>
+						<tr>
+							<td><strong> <span class="	glyphicon glyphicon-pencil"></span>  Titre        :    </strong></td>
+							<td> Emergence du web</td>
+
+						</tr>
+						<tr>
+							<td><strong><span class="	glyphicon glyphicon-map-marker"></span>   Localisation  :  </strong></td>
+							<td> ISIMA</td>
+
+						</tr>
+
+						<tr>
+							<td><strong><span class="	glyphicon glyphicon-user"></span>   Intervenants  : </strong></td>
+							<td> Said EL FARKH</td>
+
+						</tr>
+
+
+					</table>
+				</td>
+				<td> <span class="glyphicon glyphicon-heart " style="font-size:48px;color:red ;text-shadow:2px 2px 4px #000000;"></span></td>
+			</tr>
+
+			<tr>
+				<td style="text-align:left"><span class="	glyphicon glyphicon-time"></span> 09h00</td>
+				<td style="text-align:left">
+					<table>
+						<tr>
+							<td><strong> <span class="	glyphicon glyphicon-pencil"></span>  Titre        :    </strong></td>
+							<td> Emergence du web</td>
+
+						</tr>
+						<tr>
+							<td><strong><span class="	glyphicon glyphicon-map-marker"></span>   Localisation  :  </strong></td>
+							<td> ISIMA</td>
+
+						</tr>
+
+						<tr>
+							<td><strong><span class="	glyphicon glyphicon-user"></span>   Intervenants  : </strong></td>
+							<td> Said EL FARKH</td>
+
+						</tr>
+
+
+					</table>
+				</td>
+				<td> <span class="glyphicon glyphicon-heart " style="font-size:48px;color:red ;text-shadow:2px 2px 4px #000000;"></span></td>
+			</tr>
+
+
+
+		</tbody>
+	</table>
+</div>
+
 	<br><br><br>
 	<?php include("footer.php"); ?>
 

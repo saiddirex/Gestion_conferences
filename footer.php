@@ -1,11 +1,12 @@
 <footer style="background-color:#ccccb3">
+<br><br>
 <div class="inner-footer" >
 	<div class="container">
 		<div class="row">
 			<div class="row">
 				<div class="col-md-4 f-about">
 					<a href="#">
-						<h1><span>G</span>estion de conférence</h1>
+						<h1><span style="color: #ED502E">G</span>estion de conférence</h1>
 					</a>
 					<p>Plateforme et portail d'information des conférences animées à travers le monde.</p>
 
@@ -39,4 +40,5 @@
 		</div>
 		<a href="" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 	</div>
+	<br><br>
 </footer>

@@ -12,9 +12,13 @@
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/Administration.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- Custom styles for this template -->
 	<link href="css/sticky-footer-navbar.css" rel="stylesheet">
+	
   </head>
 
   <body>
@@ -28,8 +32,8 @@
 					<div class="col-sm-6 col-sm-offset-2 text">
 							<h1><strong>ZZ_Agenda</strong> Administration Form</h1>
 					</div>
-					<div class="col-sm-2 col-sm-offset-10 ">
-							<button type="button" class="btn btn-success btn-sm" style="background-color:#33EB52"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+					<div class="col-sm-3 col-sm-offset-12">
+					<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
 
 					</div>
 			</div>
@@ -111,7 +115,7 @@
 	</div>
 
 </body>
-
+<br><br><br><br><br>
 	
 	<?php include("footer.php"); ?>
 
