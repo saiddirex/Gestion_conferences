@@ -34,8 +34,15 @@
 	</div>
 
 	<br>
+	
+	<?php
+$xml=simplexml_load_file("conference.xml") or die("Error: Cannot create object");?>
+
+
+
 
 	<table class="table">
+	
 		<thead>
 			<tr>
 				<th style="text-align:left">Horaire</th>
@@ -46,24 +53,25 @@
 			</tr>
 		</thead>
 		<tbody>
+		<?php foreach($xml->children() as $conference) { ?>
 			<tr>
-				<td style="text-align:left"><span class="	glyphicon glyphicon-time"></span> 09h00</td>
+				<td style="text-align:left"><span class="	glyphicon glyphicon-time"></span><?php echo $conference->horaire;   ?></td>
 				<td style="text-align:left">
 					<table>
 						<tr>
 							<td><strong> <span class="	glyphicon glyphicon-pencil"></span>  Titre        :    </strong></td>
-							<td> Emergence du web</td>
+							<td> <?php  echo $conference->titre;  ?></td>
 
 						</tr>
 						<tr>
 							<td><strong><span class="	glyphicon glyphicon-map-marker"></span>   Localisation  :  </strong></td>
-							<td> ISIMA</td>
+							<td> <?php  echo $conference->localisation;  ?></td>
 
 						</tr>
 
 						<tr>
 							<td><strong><span class="	glyphicon glyphicon-user"></span>   Intervenants  : </strong></td>
-							<td> Said EL FARKH</td>
+							<td> <?php  echo $conference->intervenant; ?></td>
 
 						</tr>
 
@@ -72,61 +80,8 @@
 				</td>
 				<td> <span class="glyphicon glyphicon-heart " style="font-size:48px;color:red ;text-shadow:2px 2px 4px #000000;"></span></td>
 			</tr>
-
-			<tr>
-				<td style="text-align:left"><span class="	glyphicon glyphicon-time"></span> 09h00</td>
-				<td style="text-align:left">
-					<table>
-						<tr>
-							<td><strong> <span class="	glyphicon glyphicon-pencil"></span>  Titre        :    </strong></td>
-							<td> Emergence du web</td>
-
-						</tr>
-						<tr>
-							<td><strong><span class="	glyphicon glyphicon-map-marker"></span>   Localisation  :  </strong></td>
-							<td> ISIMA</td>
-
-						</tr>
-
-						<tr>
-							<td><strong><span class="	glyphicon glyphicon-user"></span>   Intervenants  : </strong></td>
-							<td> Said EL FARKH</td>
-
-						</tr>
-
-
-					</table>
-				</td>
-				<td> <span class="glyphicon glyphicon-heart " style="font-size:48px;color:red ;text-shadow:2px 2px 4px #000000;"></span></td>
-			</tr>
-
-			<tr>
-				<td style="text-align:left"><span class="	glyphicon glyphicon-time"></span> 09h00</td>
-				<td style="text-align:left">
-					<table>
-						<tr>
-							<td><strong> <span class="	glyphicon glyphicon-pencil"></span>  Titre        :    </strong></td>
-							<td> Emergence du web</td>
-
-						</tr>
-						<tr>
-							<td><strong><span class="	glyphicon glyphicon-map-marker"></span>   Localisation  :  </strong></td>
-							<td> ISIMA</td>
-
-						</tr>
-
-						<tr>
-							<td><strong><span class="	glyphicon glyphicon-user"></span>   Intervenants  : </strong></td>
-							<td> Said EL FARKH</td>
-
-						</tr>
-
-
-					</table>
-				</td>
-				<td> <span class="glyphicon glyphicon-heart " style="font-size:48px;color:red ;text-shadow:2px 2px 4px #000000;"></span></td>
-			</tr>
-
+		<?php } ?>
+			
 
 
 		</tbody>
