@@ -32,8 +32,8 @@
 					<div class="col-sm-6 col-sm-offset-2 text">
 							<h1><strong>ZZ_Agenda</strong> Administration Form</h1>
 					</div>
-					<div class="col-sm-3 col-sm-offset-12">
-					<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
+					<div class="col-sm-2 col-sm-offset-10">
+					<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
 
 					</div>
 			</div>
