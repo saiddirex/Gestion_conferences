@@ -28,6 +28,8 @@
 	
 	<body>
 	<div class="container">
+	<?php $xml=simplexml_load_file("conference.xml") or die("Error: Cannot create object");?>
+
 			<div class="row">
 					<div class="col-sm-6 col-sm-offset-2 text">
 							<h1><strong>ZZ_Agenda</strong> Administration Form</h1>
@@ -49,67 +51,19 @@
 							</tr>
 					</thead>
 					<tbody>
+					<?php foreach($xml->children() as $conference) { ?>
 							<tr>
-									<td style="text-align:left">Immergence du web</td>
-									<td style="text-align:left">said EL FARKH</td>
-									<td style="text-align:left">ISIMA</td>
-									<td style="text-align:left">30/09/2017</td>
+									<td style="text-align:left"><?php echo $conference->titre;   ?></td>
+									<td style="text-align:left"><?php echo $conference->intervenant;   ?></td>
+									<td style="text-align:left"><?php echo $conference->localisation;   ?></td>
+									<td style="text-align:left"><?php echo $conference->date;   ?></td>
 									<td style="text-align:left">
 											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
 											<button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button>
 									</td>
 
 							</tr>
-							<tr>
-									<td style="text-align:left">La mondialisation</td>
-									<td style="text-align:left">said EL FARKH</td>
-									<td style="text-align:left">ISIMA</td>
-									<td style="text-align:left">30/09/2017</td>
-									<td style="text-align:left">
-											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-											<button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button>
-									</td>
-							</tr>
-							<tr>
-									<td style="text-align:left">La mondialisation</td>
-									<td style="text-align:left">said EL FARKH</td>
-									<td style="text-align:left">ISIMA</td>
-									<td style="text-align:left">30/09/2017</td>
-									<td style="text-align:left">
-											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-											<button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button>
-									</td>
-							</tr>
-							<tr>
-									<td style="text-align:left">La mondialisation</td>
-									<td style="text-align:left">said EL FARKH</td>
-									<td style="text-align:left">ISIMA</td>
-									<td style="text-align:left">30/09/2017</td>
-									<td style="text-align:left">
-											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-											<button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button>
-									</td>
-							</tr>
-							<tr>
-									<td style="text-align:left">La mondialisation</td>
-									<td style="text-align:left">said EL FARKH</td>
-									<td style="text-align:left">ISIMA</td>
-									<td style="text-align:left">30/09/2017</td>
-									<td style="text-align:left">
-											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-											<button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button>
-									</td>
-							</tr>
-							<tr>
-									<td style="text-align:left">La mondialisation</td>
-									<td style="text-align:left">said EL FARKH</td>
-									<td style="text-align:left">ISIMA</td>
-									<td style="text-align:left">30/09/2017</td>
-									<td style="text-align:left">
-											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-											<button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button>
-									</td>
-							</tr>
+					<?php } ?>
 					</tbody>
 			</table>
 	</div>
