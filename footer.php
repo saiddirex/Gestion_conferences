@@ -1,5 +1,42 @@
-<footer class="footer">
+<footer style="background-color:#ccccb3">
+<div class="inner-footer" >
 	<div class="container">
-		<span class="text-muted">Place sticky footer content here.</span>
+		<div class="row">
+			<div class="row">
+				<div class="col-md-4 f-about">
+					<a href="#">
+						<h1><span>G</span>estion de conférence</h1>
+					</a>
+					<p>Plateforme et portail d'information des conférences animées à travers le monde.</p>
+
+				</div>
+				<div class="col-md-2 l-posts">
+				</div>
+				<div class="col-md-6 f-contact">
+					<h3 class="widgetheading">Nous-contacter</h3>
+					<a href="mailto:gestion-conferences@gmail.com">
+						<p><i class="fa fa-envelope"></i> gestion-conference@gmail.com</p>
+					</a>
+					<p><i class="fa fa-phone"></i> (+212) 37 77 85 79 / 77 / 73</p>
+					<p><i class="fa fa-print"></i>(+212) 37 77 72 30</p>
+					<p><i class="fa fa-home"></i> Institut Superieur d'Informatique de Modélisation et de leurs Applications</p>
+					<p><i></i><i></i><i></i>63170-Aubiere-FRANCE</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="last-div">
+		<div class="container">
+			<div class="row">
+				<div class="copyright">
+					© 2016 Tout droit réservé | <a href="http://www.isima.fr">ISIMA</a>
+				</div>
+
+
+				<div class="clear"></div>
+			</div>
+		</div>
+		<a href="" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 	</div>
 </footer>
