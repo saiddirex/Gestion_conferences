@@ -11,7 +11,7 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/home.css" rel="stylesheet">
+	<link href="../css/ajouterconf.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
 	<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
