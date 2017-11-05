@@ -7,20 +7,23 @@
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
 
-	<title>Ajouter une conférence</title>
+	<title>Home</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/ajouterConf.css" rel="stylesheet">
+	<link href="css/home.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
 	<link href="css/sticky-footer-navbar.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
 
+	<!-- Fixed navbar -->
 	<?php include("header.php"); ?>
-
 
 	<div class="container">
 		<div class="col-sm-10 offset-sm-1">
@@ -51,8 +54,12 @@
 		</div>
 	</div>
 
+
+
+	<br><br><br>
 	<?php include("footer.php"); ?>
-	
+
+
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -65,5 +72,42 @@
   </body>
 </html>
 
-<!-- https://bootsnipp.com/snippets/featured/simple-contact-form -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
