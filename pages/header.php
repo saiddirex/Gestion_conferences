@@ -9,10 +9,10 @@
 					<a class="nav-link" href="home.php">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="Administration.php">Administration</a>
+					<a class="nav-link" href="administration.php">Administration</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="AjouterConf.php">Ajouter</a>
+					<a class="nav-link" href="ajouterconf.php">Ajouter</a>
 				</li>
 				<div class="container">
 					<div class="row">

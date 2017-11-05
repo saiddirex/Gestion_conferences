@@ -10,11 +10,11 @@
 		<title>Sign In</title>
 
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/sticky-footer-navbar.css" rel="stylesheet">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<link href="css/signin.css" rel="stylesheet">
+		<link href="../css/signin.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -38,39 +38,11 @@
 		
 		<?php include("footer.php"); ?>
 
-		<?php 
-			// Checks if a user's credentials are correct
-			function isUser($id, $pwd)
-			{
-				$res = json_decode(file_get_contents("users.json"));
-				foreach($res->{'users'} as $user)
-				{
-					if($user->{'id'} == $id && $user->{'pwd'} == $pwd)
-					{
-						return true
-					}
-				}
-				return false;
-			}
-			
-			// Checks if a user has admin rights or not
-			function isUserAdmin($id)
-			{
-				$res = json_decode(file_get_contents("users.json"));
-				foreach($res->{'users'} as $user)
-				{
-					if($user->{'id'} == $id)
-					{
-						return $user->{'admin'};
-					}
-				}
-				return false;
-			}
-		?>
+		
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+		<script src="../js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
