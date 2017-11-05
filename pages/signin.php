@@ -10,11 +10,11 @@
 		<title>Sign In</title>
 
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/sticky-footer-navbar.css" rel="stylesheet">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<link href="css/signin.css" rel="stylesheet">
+		<link href="../css/signin.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -47,7 +47,7 @@
 				{
 					if($user->{'id'} == $id && $user->{'pwd'} == $pwd)
 					{
-						return true
+						return true;
 					}
 				}
 				return false;
@@ -71,6 +71,6 @@
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+		<script src="../js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

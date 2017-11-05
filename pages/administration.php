@@ -10,14 +10,14 @@
 	<title>Administration</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/Administration.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/Administration.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- Custom styles for this template -->
-	<link href="css/sticky-footer-navbar.css" rel="stylesheet">
+	<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
 	
   </head>
 
@@ -28,7 +28,7 @@
 	
 	<body>
 	<div class="container">
-	<?php $xml=simplexml_load_file("conference.xml") or die("Error: Cannot create object");?>
+	<?php $xml=simplexml_load_file("../db/conference.xml") or die("Error: Cannot create object");?>
 
 			<div class="row">
 					<div class="col-sm-6 col-sm-offset-2 text">
