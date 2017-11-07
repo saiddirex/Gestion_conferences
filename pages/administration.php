@@ -35,7 +35,7 @@
 							<h1><strong>ZZ_Agenda</strong> Administration Form</h1>
 					</div>
 					<div class="col-sm-2 col-sm-offset-10">
-					<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+					<a class="active" href="ajouterConf.php" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> Ajouter</button></a>
 
 					</div>
 			</div>
