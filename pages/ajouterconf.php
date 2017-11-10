@@ -44,12 +44,12 @@
 						<input type="text" class="form-control" id="intervenant" name="intervenant" required>
 					</div>
 					<div class="form-group">
-						<label for="horaire"> Horaire </label>
-						<input type="text" class="form-control" id="horaire" name="horaire" required>
-					</div>
-					<div class="form-group">
 						<label for="date"> Date </label>
 						<input type="text" class="form-control" id="date" name="date" required>
+					</div>
+					<div class="form-group">
+						<label for="horaire"> Horaire </label>
+						<input type="text" class="form-control" id="horaire" name="horaire" required>
 					</div>
 					<button type="submit" id="submit" class="btn btn-primary pull-right">Créer la conférence</button>
 				</form>
