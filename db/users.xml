@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+	<user>
+		<fname>John</fname>
+		<name>Doe</name>
+		<email>fake.email@void.null</email>
+		<pwd>1234</pwd>
+	</user>
+<user><fname>Jane</fname><name>Doe</name><email>email.fake@void.null</email><pwd>5678</pwd></user></users>
