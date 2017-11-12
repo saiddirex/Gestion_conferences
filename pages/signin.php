@@ -34,13 +34,13 @@
 		<form class="form-signin" action="../functions/signindb.php" method="post">
 			
 			<label for="inputFName">First Name</label>
-			<input type="text" id="inputFName" class="form-control" required autofocus>
+			<input type="text" id="inputFName" name="fname" class="form-control" required autofocus>
 			<label for="inputName">Second Name</label>
-			<input type="text" id="inputName" class="form-control" required>
+			<input type="text" id="inputName" name="name" class="form-control" required>
 			<label for="inputEmail">Email address</label>
-			<input type="email" id="inputEmail" class="form-control" required>
+			<input type="email" id="inputEmail" name="email" class="form-control" required>
 			<label for="inputPassword">Password</label>
-			<input type="password" id="inputPassword" class="form-control" required>
+			<input type="password" id="inputPassword" name="pwd" class="form-control" required>
 			
 
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
