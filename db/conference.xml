@@ -35,4 +35,4 @@
     <intervenant>Said EL FARKH</intervenant>
     <date>12/01/2018</date>
   </conference>
-</conferences>
+<conference><horaire>10h00</horaire><titre>Le financement des campagnes politiques</titre><localisation>Maison d'arrêt de la Santé</localisation><intervenant>Nicolas Sarkozy</intervenant><date>20/10/2023</date></conference></conferences>
