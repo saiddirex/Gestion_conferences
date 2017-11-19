@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <users>
 	<user>
+	    
 		<fname>John</fname>
 		<name>Doe</name>
 		<email>fake.email@void.null</email>
-		<pwd>1234</pwd>
+		<login>1</login>
+		<pwd>1</pwd>
+		<admin>true</admin>
 	</user>
-<user><fname>Jane</fname><name>Doe</name><email>email.fake@void.null</email><pwd>5678</pwd></user></users>
+	<user>
+		<fname>said</fname>
+		<name>el farkh</name>
+		<email>fake.email@void.null</email>
+		<login>said</login>
+		<pwd>said</pwd>
+		<admin>true</admin>
+	</user>
+<user><fname>anass</fname><name>mkoudi</name>
+<email>anass@gmail.com</email><login>anass</login>
+<pwd>anass</pwd><admin>false</admin></user></users>

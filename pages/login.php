@@ -31,29 +31,56 @@
 	</div>
 
 	<div class="container">
-		<form class="form-signin">
-			
-			<label for="inputEmail" class="sr-only">Email address</label>
-			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+		<form  method="post" class="form-signin"  action="../functions/connexion.php" >
+			<label for="login" class="sr-only">Login</label>
+			<input type="text" name="login"class="form-control" placeholder="Veuillez saisir votre login" required>
+			<label for="password" class="sr-only">Password</label>
+			<input type="text" name="password" class="form-control"  placeholder="Veuillez saisir votre mot de passe" required>
 			<div class="checkbox">
 				<label>
 				<input type="checkbox" value="remember-me"> Remember me
 			  </label>
-			</div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			</div> 
+			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit">Log in</button>
 		</form>
+
 	</div>
+	
 	<!-- /container -->
 	<br><br><br>
 	<?php include("footer.php"); ?>
 
 
-	<!-- Bootstrap core JavaScript
-		================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 </body>
 

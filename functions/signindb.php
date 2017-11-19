@@ -13,18 +13,21 @@
 	$_name = recupVar("name");
 	$_email = recupVar("email");
 	$_pwd = recupVar("pwd");
+	$_login = recupVar("login");
+	$_admin = recupVar("admin");
 	
 
-	if(checkArg($_fname) && checkArg($_name) && checkArg($_email) && checkArg($_pwd))
+	if(checkArg($_fname) && checkArg($_name) && checkArg($_email) && checkArg($_pwd) && checkArg($_login) && checkArg($_admin))
 	{
 		$xml = simplexml_load_file("../db/users.xml");
-
 		$newconf=$xml->addChild('user');
-		
 		$newconf->addChild('fname', $_fname);
 		$newconf->addChild('name', $_name);
 		$newconf->addChild('email', $_email);
+		$newconf->addChild('login', $_login);
 		$newconf->addChild('pwd', $_pwd);
+		$newconf->addChild('admin', $_admin);
+
 
 		$xml->asXML("../db/users.xml");
 		

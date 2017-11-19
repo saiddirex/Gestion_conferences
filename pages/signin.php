@@ -39,10 +39,11 @@
 			<input type="text" id="inputName" name="name" class="form-control" required>
 			<label for="inputEmail">Email address</label>
 			<input type="email" id="inputEmail" name="email" class="form-control" required>
+			<label for="inputLogin">Login</label>
+			<input type="text" id="inputLogin" name="login" class="form-control" required>
 			<label for="inputPassword">Password</label>
 			<input type="password" id="inputPassword" name="pwd" class="form-control" required>
-			
-
+			<input type="text" id="inputAdmin" name="admin" class="form-control" value="false" hidden >
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 		</form>
 	</div>
