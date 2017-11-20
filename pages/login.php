@@ -22,7 +22,10 @@
 </head>
 
 <body>
-	<?php include("header.php"); ?>
+	<?php 
+	//session_start();
+	//$_SESSION['connecte']=false;
+	include("header.php"); ?>
 
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-4 text">

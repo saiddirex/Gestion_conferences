@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <conferences>
-  <conference>
-    <horaire>09h00</horaire>
-    <titre>Immergence du web</titre>
-    <localisation>Paris</localisation>
-    <intervenant>Said EL FARKH</intervenant>
-    <date>12/01/2018</date>
+  
+  <conference id="2">
+   
+    <horaire>12h00 </horaire>
+    <titre>Intelligence Artificielle </titre>
+    <localisation>Clermont ferrand </localisation>
+    <intervenant>Pierre DUPUIS </intervenant>
+    <date>12/01/2018 </date>
   </conference>
-  <conference>
-    <horaire>12h00</horaire>
-    <titre>Intelligence Artificielle</titre>
-    <localisation>Clermont ferrand</localisation>
-    <intervenant>Pierre DUPUIS</intervenant>
-    <date>12/01/2018</date>
-  </conference>
-  <conference>
-  <horaire>11h00</horaire>
+  <conference id="3 ">
+    
+    <horaire>12h00 </horaire>
     <titre>La mondialisation</titre>
-    <localisation>Lyon</localisation>
-    <intervenant>Said EL FARKH</intervenant>
-    <date>12/01/2018</date>
+    <localisation>Lyon </localisation>
+    <intervenant>Said EL FARKH </intervenant>
+    <date>12/01/2018 </date>
   </conference>
-  <conference>
+  <conference id="4">
+   
     <horaire>13h00</horaire>
     <titre>Le terrorisme</titre>
     <localisation>Paris</localisation>
     <intervenant>Said EL FARKH</intervenant>
     <date>13/01/2018</date>
   </conference>
-  <conference>   
-    <horaire>18h00</horaire>
-    <titre>Internet des objets</titre>
-    <localisation>Clermond ferrand</localisation>
-    <intervenant>Said EL FARKH</intervenant>
-    <date>12/01/2018</date>
+  
+  <conference id="6">
+   
+    <horaire>10h00 </horaire>
+    <titre>Le financement des campagnes politiques </titre>
+    <localisation>Maison d'arrêt de la Santé </localisation>
+    <intervenant>Nicolas Sarkozy </intervenant>
+    <date>20/10/2023 </date>
   </conference>
-<conference><horaire>10h00</horaire><titre>Le financement des campagnes politiques</titre><localisation>Maison d'arrêt de la Santé</localisation><intervenant>Nicolas Sarkozy</intervenant><date>20/10/2023</date></conference><conference><horaire>15h</horaire><titre>effet de serre</titre><localisation>paris</localisation><intervenant>said el farkh</intervenant><date>01/01/2018</date></conference></conferences>
+  <conference id="7">
+  
+    <horaire>15h 00  </horaire>
+    <titre>Effet de serre  </titre>
+    <localisation>paris   </localisation>
+    <intervenant>said El farkh   </intervenant>
+    <date>01/01/2018   </date>
+  </conference>
+  
+  
+  
+<conference id="209"><horaire>17:00</horaire><titre>cours php et html</titre><localisation>paris et clermont</localisation><intervenant>said el farkh  et pierre dupuis</intervenant><date>2017-11-06</date></conference></conferences>

@@ -32,7 +32,8 @@
 
 	<div class="container">
 		<form class="form-signin" action="../functions/signindb.php" method="post">
-			
+		    <label for="inputFName">Id</label>
+			<input type="text" id="inputId" name="id" class="form-control" required autofocus>
 			<label for="inputFName">First Name</label>
 			<input type="text" id="inputFName" name="fname" class="form-control" required autofocus>
 			<label for="inputName">Second Name</label>
