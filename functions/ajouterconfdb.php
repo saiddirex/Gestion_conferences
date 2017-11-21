@@ -11,7 +11,7 @@
 	{
 		return htmlspecialchars($_POST[$varname]);
 	}
-	
+	$_id=recupVar("id");
 	$_horaire = recupVar("horaire");
 	$_titre = recupVar("titre");
 	$_localisation = recupVar("lieu");
@@ -19,12 +19,13 @@
 	$_date = recupVar("date");
 	
 
-	if(checkArg($_horaire) && checkArg($_titre) && checkArg($_localisation) && checkArg($_intervenant) && checkArg($_date))
+	if(checkArg($_id) && checkArg($_horaire) && checkArg($_titre) && checkArg($_localisation) && checkArg($_intervenant) && checkArg($_date))
 	{
 		$xml = simplexml_load_file("../db/conference.xml");
 
 		$newconf=$xml->addChild('conference');
-		
+		//$newconf->addChild('id', $_id);
+		$newconf->addAttribute('id', $_id);
 		$newconf->addChild('horaire', $_horaire);
 		$newconf->addChild('titre', $_titre);
 		$newconf->addChild('localisation', $_localisation);

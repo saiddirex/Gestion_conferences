@@ -58,8 +58,8 @@
 									<td style="text-align:left"><?php echo $conference->localisation;   ?></td>
 									<td style="text-align:left"><?php echo $conference->date;   ?></td>
 									<td style="text-align:left">
-											<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-											<button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button>
+									<a class="active" href="../pages/modifierConfForm.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button></a>
+									<a class="active" href="../functions/supprimerConf.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button></a>
 									</td>
 
 							</tr>

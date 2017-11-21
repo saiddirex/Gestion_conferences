@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <users>
-	<user>
-	    
+	<user id="1">
+		
 		<fname>John</fname>
 		<name>Doe</name>
 		<email>fake.email@void.null</email>
@@ -9,7 +9,8 @@
 		<pwd>1</pwd>
 		<admin>true</admin>
 	</user>
-	<user>
+	<user id="2">
+		
 		<fname>said</fname>
 		<name>el farkh</name>
 		<email>fake.email@void.null</email>
@@ -17,6 +18,23 @@
 		<pwd>said</pwd>
 		<admin>true</admin>
 	</user>
-<user><fname>anass</fname><name>mkoudi</name>
-<email>anass@gmail.com</email><login>anass</login>
-<pwd>anass</pwd><admin>false</admin></user></users>
+	<user id="3">
+		
+		<fname>anass</fname>
+		<name>mkoudi</name>
+		<email>anass@gmail.com</email>
+		<login>anass</login>
+		<pwd>anass</pwd>
+		<admin>false</admin>
+	</user>
+	<user id="4">
+		
+		<fname>younes</fname>
+		<name>charkaoui</name>
+		<email>younes@gmail.com</email>
+		<login>younes</login>
+		<pwd>younes</pwd>
+		<admin>false</admin>
+	</user>
+
+<user id="17"><fname>ahmed</fname><name>ferdaoussi</name><email>ahmad@gmail.com</email><login>ahmed</login><pwd>ahmed</pwd><admin>false</admin></user><user id="17"><fname>ahmed</fname><name>ferdaoussi</name><email>ahmad@gmail.com</email><login>ahmed</login><pwd>ahmed</pwd><admin>false</admin></user><user id="19"><fname>khalil</fname><name>bouchefra</name><email>khalil@gmail.com</email><login>khalil</login><pwd>khalil</pwd><admin>false</admin></user></users>

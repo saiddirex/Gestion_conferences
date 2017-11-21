@@ -1,6 +1,7 @@
 
 
 <?php
+session_start();
 function connect($id, $pwd)
 
 	{
@@ -9,8 +10,9 @@ function connect($id, $pwd)
 		{
 			if($user->login == $id && $user->pwd == $pwd)
 			{  
-               
+                $_SESSION['connecte']=true;
 				return true;
+				
             }
            
 		}
@@ -25,10 +27,16 @@ function connect($id, $pwd)
 		{
 			if($user->login == $login && $user->pwd == $pwd )
 			{
-			    if($user->admin=="true") return true ;
+				if($user->admin=="true") {
+					
+					$_SESSION['admin'] = true;
+					return true ;
+				}
+				 
 			}
 			
 		}
+		$_SESSION['admin'] = false;
 		return false;
     }   
 
