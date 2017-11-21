@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conferences>
+  <conference>
+    <horaire>09h00</horaire>
+    <titre>Immergence du web</titre>
+    <localisation>Paris</localisation>
+    <intervenant>Said EL FARKH</intervenant>
+    <date>12/01/2018</date>
+  </conference>
+  <conference>
+    <horaire>12h00</horaire>
+    <titre>Intelligence Artificielle</titre>
+    <localisation>Clermont ferrand</localisation>
+    <intervenant>Pierre DUPUIS</intervenant>
+    <date>12/01/2018</date>
+  </conference>
+  <conference>
+  <horaire>11h00</horaire>
+    <titre>La mondialisation</titre>
+    <localisation>Lyon</localisation>
+    <intervenant>Said EL FARKH</intervenant>
+    <date>12/01/2018</date>
+  </conference>
+  <conference>
+    <horaire>13h00</horaire>
+    <titre>Le terrorisme</titre>
+    <localisation>Paris</localisation>
+    <intervenant>Said EL FARKH</intervenant>
+    <date>13/01/2018</date>
+  </conference>
+  <conference>   
+    <horaire>18h00</horaire>
+    <titre>Internet des objets</titre>
+    <localisation>Clermond ferrand</localisation>
+    <intervenant>Said EL FARKH</intervenant>
+    <date>12/01/2018</date>
+  </conference>
+<conference><horaire>10h00</horaire><titre>Le financement des campagnes politiques</titre><localisation>Maison d'arrêt de la Santé</localisation><intervenant>Nicolas Sarkozy</intervenant><date>20/10/2023</date></conference></conferences>

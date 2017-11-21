@@ -1,0 +1,16 @@
+{
+    "name": "pierredupuis/ICW-Project",
+    "description": "Integration Continue au Web : Project ",
+    "keywords": ["ICW"],
+    "authors": [
+        {
+            "name": "Pierre Dupuis"
+        },
+		{
+			"name": "Said El-Farkh"
+		}
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    }
+}
