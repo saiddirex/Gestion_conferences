@@ -1,39 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <users>
-	<user id="1">
-		
-		<fname>John</fname>
-		<name>Doe</name>
-		<email>fake.email@void.null</email>
-		<login>1</login>
-		<pwd>1</pwd>
-		<admin>true</admin>
-	</user>
-	<user id="2">
-		<fname>said</fname>
-		<name>el farkh</name>
-		<email>fake.email@void.null</email>
-		<login>said</login>
-		<pwd>said</pwd>
-		<admin>true</admin>
-	</user>
-	<user id="3">
-		
-		<fname>anass</fname>
-		<name>mkoudi</name>
-		<email>anass@gmail.com</email>
-		<login>anass</login>
-		<pwd>anass</pwd>
+	<user id="4fdef1f228402399d6f5ba1db37783d31267e981">
+		<fname>notadmin</fname>
+		<name>notadmin</name>
+		<email>notadmin@notadmin.com</email>
+		<login>notadmin</login>
+		<pwd>44b68f9bd1c1569c13c9938c2cc7189c4bbe433c0e08f1042e49eedf5b4b1b6b</pwd>
 		<admin>false</admin>
 	</user>
-	<user id="4">
-		
-		<fname>younes</fname>
-		<name>charkaoui</name>
-		<email>younes@gmail.com</email>
-		<login>younes</login>
-		<pwd>younes</pwd>
-		<admin>false</admin>
+	<user id="d3942dce589a8baf879be01b717184712b119a72">
+		<fname>admin</fname>
+		<name>admin</name>
+		<email>admin@admin.com</email>
+		<login>admin</login>
+		<pwd>8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918</pwd>
+		<admin>true</admin>
 	</user>
-
-<user id="17"><fname>ahmed</fname><name>ferdaoussi</name><email>ahmad@gmail.com</email><login>ahmed</login><pwd>ahmed</pwd><admin>false</admin></user><user id="17"><fname>ahmed</fname><name>ferdaoussi</name><email>ahmad@gmail.com</email><login>ahmed</login><pwd>ahmed</pwd><admin>false</admin></user><user id="19"><fname>khalil</fname><name>bouchefra</name><email>khalil@gmail.com</email><login>khalil</login><pwd>khalil</pwd><admin>false</admin></user><user id="b97b0503db04807d6b0eb96b4bb1e17c09368fd9"><fname>Pierre</fname><name>Dupuis</name><email>pierre@example.com</email><login>pidupuis</login><pwd>eb6df7db7bb83cbc78ebb8bdb4d14fdcb0911a4ed003035f5ee1fd24de2f5510</pwd><admin>false</admin></user></users>
+</users>

@@ -9,7 +9,7 @@
 		{
 			if($user->login == $id && $user->pwd == $pwd)
 			{  
-                $_SESSION['connecte']=true;
+                $_SESSION['connecte'] = true;
 				return true;
 				
             }
@@ -31,7 +31,6 @@
 			{
 				if($user->admin == "true") {
 					
-					$_SESSION['admin'] = true;
 					return true;
 				}
 				

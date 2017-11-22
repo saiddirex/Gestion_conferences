@@ -15,6 +15,7 @@
 
 			if($isAdmin)
 			{
+				$_SESSION['admin'] = true;
 				header('Location: ../pages/administration.php');
 			}
 			else
