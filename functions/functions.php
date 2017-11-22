@@ -2,6 +2,7 @@
 	
 	function connect($id, $pwd, $db = "../db/users.xml")
 	{
+		$pwd = hash("sha256", $pwd);
 		
 		$xml = simplexml_load_file($db) or die("Error: Cannot create object");
 		foreach($xml->children() as $user)

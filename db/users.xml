@@ -10,7 +10,6 @@
 		<admin>true</admin>
 	</user>
 	<user id="2">
-		
 		<fname>said</fname>
 		<name>el farkh</name>
 		<email>fake.email@void.null</email>
@@ -37,4 +36,4 @@
 		<admin>false</admin>
 	</user>
 
-<user id="17"><fname>ahmed</fname><name>ferdaoussi</name><email>ahmad@gmail.com</email><login>ahmed</login><pwd>ahmed</pwd><admin>false</admin></user><user id="17"><fname>ahmed</fname><name>ferdaoussi</name><email>ahmad@gmail.com</email><login>ahmed</login><pwd>ahmed</pwd><admin>false</admin></user><user id="19"><fname>khalil</fname><name>bouchefra</name><email>khalil@gmail.com</email><login>khalil</login><pwd>khalil</pwd><admin>false</admin></user></users>
+<user id="17"><fname>ahmed</fname><name>ferdaoussi</name><email>ahmad@gmail.com</email><login>ahmed</login><pwd>ahmed</pwd><admin>false</admin></user><user id="17"><fname>ahmed</fname><name>ferdaoussi</name><email>ahmad@gmail.com</email><login>ahmed</login><pwd>ahmed</pwd><admin>false</admin></user><user id="19"><fname>khalil</fname><name>bouchefra</name><email>khalil@gmail.com</email><login>khalil</login><pwd>khalil</pwd><admin>false</admin></user><user id="b97b0503db04807d6b0eb96b4bb1e17c09368fd9"><fname>Pierre</fname><name>Dupuis</name><email>pierre@example.com</email><login>pidupuis</login><pwd>eb6df7db7bb83cbc78ebb8bdb4d14fdcb0911a4ed003035f5ee1fd24de2f5510</pwd><admin>false</admin></user></users>
