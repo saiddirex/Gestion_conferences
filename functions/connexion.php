@@ -9,11 +9,11 @@
 		
 		if( isUser(getPOSTVar('login'), getPOSTVar('password')) )
 		{
-			
-			$_SESSION['connecte'] = true;
+			// Créé la variable. Valeurs inutiles
+			$_SESSION['connecte'] = 0;
 			if( isAdmin(getPOSTVar('login'),getPOSTVar('password')) )
 			{
-				$_SESSION['admin'] = true;
+				$_SESSION['admin'] = 0;
 				header('Location: ../pages/administration.php');
 			}
 			else

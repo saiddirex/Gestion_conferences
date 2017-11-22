@@ -20,12 +20,7 @@
 
 <body>
 <header>
-<?php
-session_start();
-if (!isset($_SESSION['connecte']))  
-	{  
-		$_SESSION['connecte'] = false;  
-	} ?>  
+<?php session_start(); ?>  
         <nav div class="navbar navbar-default navbar-static-top" role="navigation">
         </nav>
 
@@ -44,19 +39,13 @@ if (!isset($_SESSION['connecte']))
                     <div class="navbar-collapse collapse">
                         <div class="menu">
                             <ul class="nav nav-tabs" role="tablist">
-							<?php if ($_SESSION['connecte']==false):?>   
-                                <li role="presentation"><a class="active" href="pages/login.php"><strong>LOG IN</strong></a></li>
-                            <?php endif; ?>
-							<?php if ($_SESSION['connecte']==true):?>   
-                                <li role="presentation"><a class="active" href="functions/logout.php"><strong>LOG OUT</strong></a></li>
+							<?php if(!isset($_SESSION['connecte'])){?>   
+                                <li role="presentation"><a class="active" href="pages/login.php"><strong>Se connecter</strong></a></li>
+                            <?php }else{ ?>  
 								<li role="presentation"><a class="active" href="pages/home.php"><strong>HOME</strong></a></li>
-                            <?php endif; ?>
-
-								
-                                <li role="presentation"><a class="active" href="pages/signin.php"><strong>S'inscire</strong></a></li>
-
-
-
+                                <li role="presentation"><a class="active" href="functions/logout.php"><strong>Se déconnecter</strong></a></li>
+                            <?php } ?>
+                                <li role="presentation"><a class="active" href="pages/signin.php"><strong>Créer un compte</strong></a></li>
 
                             </ul>
                         </div>

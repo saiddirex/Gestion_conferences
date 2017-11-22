@@ -10,7 +10,6 @@
 			if($user->login == $id && $user->pwd == $pwd)
 			{
 				return true;
-				
             }
            
 		}
@@ -36,7 +35,6 @@
 			}
 			
 		}
-		$_SESSION['admin'] = false;
 		return false;
     }
 	

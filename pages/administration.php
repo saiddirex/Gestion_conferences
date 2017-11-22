@@ -23,8 +23,20 @@
 
 	<body>
 
-		<!-- Fixed navbar -->
 		<?php include("header.php"); ?>
+		
+		<?php
+		
+			if(!isset($_SESSION["connecte"]))
+			{
+				header("Location: ../index.php");
+			}
+			if(!isset($_SESSION["admin"]))
+			{
+				header("Location: home.php");
+			}
+		?>
+		<!-- Fixed navbar -->
 		
 		
 
