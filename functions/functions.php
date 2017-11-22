@@ -1,6 +1,6 @@
 <?php
 	
-	function connect($id, $pwd, $db = "../db/users.xml")
+	function isUser($id, $pwd, $db = "../db/users.xml")
 	{
 		$pwd = hash("sha256", $pwd);
 		
@@ -19,7 +19,7 @@
     }
 
 	// Checks if a user has admin rights or not
-	function isUserAdmin($login,$pwd, $db = "../db/users.xml")
+	function isAdmin($login,$pwd, $db = "../db/users.xml")
 	{
 		$pwd = hash("sha256", $pwd);
 		

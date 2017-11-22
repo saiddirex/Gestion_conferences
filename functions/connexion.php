@@ -7,13 +7,10 @@
 	if(isset($_POST['submit']))
 	{
 		
-		$tmp = connect(getPOSTVar('login'), getPOSTVar('password'));
-		
-		if($tmp)
+		if( isUser(getPOSTVar('login'), getPOSTVar('password')) )
 		{
-			$isAdmin = isUserAdmin(getPOSTVar('login'),getPOSTVar('password'));
 
-			if($isAdmin)
+			if( isAdmin(getPOSTVar('login'),getPOSTVar('password')) )
 			{
 				$_SESSION['admin'] = true;
 				header('Location: ../pages/administration.php');
