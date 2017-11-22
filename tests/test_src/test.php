@@ -13,6 +13,7 @@ class DBTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(true, isUser("notadmin", "notadmin", $this->db));
         $this->assertEquals(true, isUser("admin", "admin", $this->db));
+        $this->assertEquals(false, isUser("hacker", "malveillant", $this->db));
     }
     public function testIsAdmin()
     {
