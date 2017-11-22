@@ -16,7 +16,7 @@ class DBTest extends PHPUnit_Framework_TestCase
     }
     public function testIsAdmin()
     {
-        $this->assertEquals(false, isUAdmin("notadmin", "notadmin", $this->db));
+        $this->assertEquals(false, isAdmin("notadmin", "notadmin", $this->db));
         $this->assertEquals(true, isAdmin("admin", "admin", $this->db));
     }
 }
