@@ -26,6 +26,7 @@
 		<!-- Fixed navbar -->
 		<?php include("header.php"); ?>
 		
+		
 
 		<div class="container">
 		<?php $xml=simplexml_load_file("../db/conference.xml") or die("Error: Cannot create object");?>

@@ -8,8 +8,7 @@
 		foreach($xml->children() as $user)
 		{
 			if($user->login == $id && $user->pwd == $pwd)
-			{  
-                $_SESSION['connecte'] = true;
+			{
 				return true;
 				
             }

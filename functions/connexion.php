@@ -9,7 +9,8 @@
 		
 		if( isUser(getPOSTVar('login'), getPOSTVar('password')) )
 		{
-
+			
+			$_SESSION['connecte'] = true;
 			if( isAdmin(getPOSTVar('login'),getPOSTVar('password')) )
 			{
 				$_SESSION['admin'] = true;
