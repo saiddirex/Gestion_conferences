@@ -39,4 +39,9 @@
 		return false;
     }
 	
+	function getPOSTVar($varPOST)
+	{
+		return htmlspecialchars($_POST[$varPOST]);
+	}
+	
 ?>
