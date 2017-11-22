@@ -20,8 +20,10 @@
 	// Checks if a user has admin rights or not
 	function isUserAdmin($login,$pwd, $db = "../db/users.xml")
 	{
+		$pwd = hash("sha256", $pwd);
 		
 		$xml=simplexml_load_file($db) or die("Error: Cannot create object");
+		
 		foreach($xml->children() as $user)
 		{
 			if($user->login == $login && $user->pwd == $pwd )
@@ -29,7 +31,7 @@
 				if($user->admin == "true") {
 					
 					$_SESSION['admin'] = true;
-					return true ;
+					return true;
 				}
 				
 			}
