@@ -12,7 +12,7 @@
 	$_fname = recupVar("fname");
 	$_name = recupVar("name");
 	$_email = recupVar("email");
-	$_pwd = hash("sha256",recupVar("pwd"));
+	$_pwd = hash("sha256", recupVar("pwd"));
 	$_login = recupVar("login");
 	
 
