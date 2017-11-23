@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <users>
-	<user>
-		<fname>Test</fname>
-		<name>Test</name>
-		<login>NotAdmin</login>
-		<email>notadmin@example.com</email>
-		<pwd>test</pwd>
+	<user id="4fdef1f228402399d6f5ba1db37783d31267e981">
+		<fname>notadmin</fname>
+		<name>notadmin</name>
+		<email>notadmin@notadmin.com</email>
+		<login>notadmin</login>
+		<pwd>44b68f9bd1c1569c13c9938c2cc7189c4bbe433c0e08f1042e49eedf5b4b1b6b</pwd>
 		<admin>false</admin>
 	</user>
-	<user>
-		<fname>John</fname>
-		<name>Doe</name>
-		<login>Admin</login>
-		<email>admin@example.com</email>
-		<pwd>test</pwd>
+	<user id="d3942dce589a8baf879be01b717184712b119a72">
+		<fname>admin</fname>
+		<name>admin</name>
+		<email>admin@admin.com</email>
+		<login>admin</login>
+		<pwd>8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918</pwd>
 		<admin>true</admin>
 	</user>
-<user><fname>Jane</fname><name>Doe</name><email>email.fake@void.null</email><pwd>5678</pwd></user><admin>true</admin></users>
+</users>
