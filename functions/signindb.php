@@ -14,6 +14,7 @@
 	$_email = recupVar("email");
 	$_pwd = hash("sha256", recupVar("pwd"));
 	$_login = recupVar("login");
+	$_admin = recupVar("admin");
 	
 
 	if(checkArg($_fname) && checkArg($_name) && checkArg($_email) && checkArg($_pwd) && checkArg($_login))
