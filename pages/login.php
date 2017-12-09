@@ -23,8 +23,11 @@
 
 <body>
 	<?php 
-	//session_start();
-	//$_SESSION['connecte']=false;
+	session_start();
+	if(isset(_SESSION["connecte"]))
+	{
+		header("../index.php");	// Prevent user from trying to connect when he already is
+	}
 	include("header.php"); ?>
 
 	<div class="row">

@@ -16,4 +16,4 @@
 		<pwd>8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918</pwd>
 		<admin>true</admin>
 	</user>
-</users>
+<user id="f753663236631d4ab7d211577ca173fdeea7ef14"><fname>David</fname><name>Santiago</name><email>ds@truc.com</email><login>david</login><pwd>07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e</pwd><admin>on</admin></user><user id="b9547b1be34118a4b54760175c035f28e1d589c0"><fname>John</fname><name>Doe</name><email>jd@truc.com</email><login>jo</login><pwd>c278ec5a69c34aace42773e41b1163e6ce40c906f2a14f807d39d1b2a1c2dff5</pwd><admin/></user></users>

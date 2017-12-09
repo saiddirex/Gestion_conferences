@@ -44,9 +44,9 @@
 			<label for="inputPassword">Password</label>
 			<input type="password" id="inputPassword" name="pwd" class="form-control" required>
 			<?php if(isset($_SESSION["admin"])) { ?>
-			<label for="inputAdmin">Administrateur</label>
-			<input type="checkbox" id="inputAdmin" name="admin" class="form-control">
-			<br>
+				<label for="inputAdmin">Administrateur</label>
+				<input type="checkbox" id="inputAdmin" name="admin" class="form-control">
+				<br>
 			<?php } ?>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 		</form>

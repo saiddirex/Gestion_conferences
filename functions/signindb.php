@@ -29,12 +29,19 @@
 		$newconf->addChild('email', $_email);
 		$newconf->addChild('login', $_login);
 		$newconf->addChild('pwd', $_pwd);
-		$newconf->addChild('admin', 'false');
+		$newconf->addChild('admin', $_admin);
 
 
 		$xml->asXML("../db/users.xml");
 		
-		header("Location: ../pages/login.php");
+		if(isset($_SESSION["connecte"])
+		{
+			header("Location: ../index.php");
+		}
+		else
+		{
+			header("Location: ../pages/login.php");
+		}
 	}
 	
 
