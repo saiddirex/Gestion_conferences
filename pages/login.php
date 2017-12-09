@@ -23,12 +23,13 @@
 
 <body>
 	<?php 
-	session_start();
-	if(isset(_SESSION["connecte"]))
-	{
-		header("../index.php");	// Prevent user from trying to connect when he already is
+	include("header.php");
+	
+	if(isset($_SESSION["connecte"]))
+	{									// Prevent user from trying to connect when he already is
+		header("Location: ../index.php");
 	}
-	include("header.php"); ?>
+	?>
 
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-4 text">
