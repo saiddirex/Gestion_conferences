@@ -3,11 +3,11 @@
   
   <conference id="2">
    
-    <horaire>12h00 </horaire>
-    <titre>Intelligence Artificielle </titre>
-    <localisation>Clermont ferrand </localisation>
-    <intervenant>Pierre DUPUIS </intervenant>
-    <date>12/01/2018 </date>
+    <horaire>12h00  </horaire>
+    <titre>Intelligence Artificielle  </titre>
+    <localisation>Clermont-Ferrand  </localisation>
+    <intervenant>Pierre DUPUIS  </intervenant>
+    <date>12/01/2018  </date>
   </conference>
   <conference id="3 ">
     

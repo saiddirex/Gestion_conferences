@@ -22,9 +22,6 @@ session_start();?>
 						</li>
 					<?php } ?>
 				<?php } ?>
-				<li class="nav-item">
-					<p class="nav-link">[<?php echo session_id(); echo " "; echo isset($_SESSION["admin"]); ?>]</p>
-				</li>
             </ul>
 		</div>
 </nav>
