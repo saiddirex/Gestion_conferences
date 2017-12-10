@@ -22,9 +22,15 @@
 	</head>
 
 	<body>
-
-	<!-- Fixed navbar -->
+	
 	<?php include("header.php"); ?>
+	<?php
+		if(!isset($_SESSION["connecte"]))
+		{
+			header("Location: ../index.php");
+		}
+	?>
+	<!-- Fixed navbar -->
 
 	
 	<div class="container">

@@ -14,6 +14,14 @@
 	$_email = recupVar("email");
 	$_pwd = hash("sha256", recupVar("pwd"));
 	$_login = recupVar("login");
+	if(recupVar("admin") == "on")
+	{
+		$_admin = "true";
+	}
+	else
+	{
+		$_admin = "false";
+	}
 	
 
 	if(checkArg($_fname) && checkArg($_name) && checkArg($_email) && checkArg($_pwd) && checkArg($_login))
@@ -28,12 +36,19 @@
 		$newconf->addChild('email', $_email);
 		$newconf->addChild('login', $_login);
 		$newconf->addChild('pwd', $_pwd);
-		$newconf->addChild('admin', 'false');
+		$newconf->addChild('admin', $_admin);
 
 
 		$xml->asXML("../db/users.xml");
 		
-		header("Location: ../pages/login.php");
+		if(isset($_SESSION["connecte"]))
+		{
+			header("Location: ../index.php");
+		}
+		else
+		{
+			header("Location: ../pages/login.php");
+		}
 	}
 	
 

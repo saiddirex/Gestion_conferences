@@ -33,8 +33,6 @@
 
 	<div class="container">
 		<form class="form-signin" action="../functions/signindb.php" method="post">
-		    <label for="inputFName">Id</label>
-			<input type="text" id="inputId" name="id" class="form-control" required autofocus>
 			<label for="inputFName">First Name</label>
 			<input type="text" id="inputFName" name="fname" class="form-control" required autofocus>
 			<label for="inputName">Second Name</label>
@@ -45,7 +43,11 @@
 			<input type="text" id="inputLogin" name="login" class="form-control" required>
 			<label for="inputPassword">Password</label>
 			<input type="password" id="inputPassword" name="pwd" class="form-control" required>
-			<input type="text" id="inputAdmin" name="admin" class="form-control" value="false" hidden >
+			<?php if(isset($_SESSION["admin"])) { ?>
+				<label for="inputAdmin">Administrateur</label>
+				<input type="checkbox" id="inputAdmin" name="admin" class="form-control">
+				<br>
+			<?php } ?>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 		</form>
 	</div>

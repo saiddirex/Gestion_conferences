@@ -24,7 +24,6 @@
 		$xml = simplexml_load_file("../db/conference.xml");
 
 		$newconf=$xml->addChild('conference');
-		//$newconf->addChild('id', $_id);
 		$newconf->addAttribute('id', $_id);
 		$newconf->addChild('horaire', $_horaire);
 		$newconf->addChild('titre', $_titre);
