@@ -2,7 +2,7 @@
 
 // On va chercher le VRAI fichier de fonctions.
 include("functions/functions.php");
-include("functions/sort.php")
+include("functions/sort.php");
 
 class DBTest extends PHPUnit_Framework_TestCase
 {
@@ -30,8 +30,8 @@ class DBTest extends PHPUnit_Framework_TestCase
 		foreach($xml->conference as $conf)	// Test the order
 		{
 			$this->assertEquals(strval($i), $conf->titre);
+			$i++;
 		}
-		$i++;
 		
 		
 	}
