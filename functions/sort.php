@@ -4,9 +4,9 @@
 
 <?php
 
-	function sortConf($db = "../db/conference.xml")
+	function sortConf($db_in = "../db/conference.xml", $db_out = "../db/conference.xml")
 	{
-		$xml = simplexml_load_file($db);
+		$xml = simplexml_load_file($db_in);
 	
 		// export xml data from file to an array
 		$tosort_array = array();
@@ -39,6 +39,6 @@
 			}
 		}
 		
-		$sorted_xml->asXML($db);
+		$sorted_xml->asXML($db_out);
 	}
 ?>
