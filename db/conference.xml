@@ -1,48 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <conferences>
   
-  <conference id="2">
-   
-    <horaire>12h00  </horaire>
-    <titre>Intelligence Artificielle  </titre>
-    <localisation>Clermont-Ferrand  </localisation>
-    <intervenant>Pierre DUPUIS  </intervenant>
-    <date>12/01/2018  </date>
-  </conference>
-  <conference id="3 ">
-    
-    <horaire>12h00 </horaire>
-    <titre>La mondialisation</titre>
-    <localisation>Lyon </localisation>
-    <intervenant>Said EL FARKH </intervenant>
-    <date>12/01/2018 </date>
-  </conference>
-  <conference id="4">
-   
-    <horaire>13h00</horaire>
-    <titre>Le terrorisme</titre>
-    <localisation>Paris</localisation>
-    <intervenant>Said EL FARKH</intervenant>
-    <date>13/01/2018</date>
-  </conference>
-  
-  <conference id="6">
-   
-    <horaire>10h00 </horaire>
-    <titre>Le financement des campagnes politiques </titre>
-    <localisation>Maison d'arrêt de la Santé </localisation>
-    <intervenant>Nicolas Sarkozy </intervenant>
-    <date>20/10/2023 </date>
-  </conference>
-  <conference id="7">
-  
-    <horaire>15h 00  </horaire>
-    <titre>Effet de serre  </titre>
-    <localisation>paris   </localisation>
-    <intervenant>said El farkh   </intervenant>
-    <date>01/01/2018   </date>
-  </conference>
-  
-  
-  
-<conference id="209"><horaire>17:00</horaire><titre>cours php et html</titre><localisation>paris et clermont</localisation><intervenant>said el farkh  et pierre dupuis</intervenant><date>2017-11-06</date></conference></conferences>
+	<conference id="2">
+		<titre>Intelligence Artificielle  </titre>
+		<localisation>Clermont-Ferrand	</localisation>
+		<intervenant>Pierre DUPUIS	</intervenant>
+		<datetime>2017-01-01T09:00:00+00:00</datetime>
+	</conference>
+	<conference id="3 ">
+		<titre>La mondialisation</titre>
+		<localisation>Lyon </localisation>
+		<intervenant>Said EL FARKH </intervenant>
+		<datetime>2017-01-05T15:00:00+00:00</datetime>
+	</conference>
+	<conference id="4">
+		<titre>Le terrorisme</titre>
+		<localisation>Paris</localisation>
+		<intervenant>Said EL FARKH</intervenant>
+		<datetime>2017-01-05T20:00:00+00:00</datetime>
+	</conference>  
+	<conference id="7">
+		<titre>Effet de serre</titre>
+		<localisation>paris</localisation>
+		<intervenant>said El farkh</intervenant>
+		<datetime>2017-01-05T21:00:00+00:00</datetime>
+	</conference>
+	<conference id="209">
+		<titre>cours php et html</titre>
+		<localisation>paris et clermont</localisation>
+		<intervenant>said el farkh	et pierre dupuis</intervenant>
+		<datetime>2017-01-05T17:00:00+00:00</datetime>
+	</conference>
+	<conference id="a">
+		<titre>b</titre>
+		<localisation>c</localisation>
+		<intervenant>d</intervenant>
+		<datetime>2017-01-13T14:30:00+00:00</datetime>
+	</conference>
+	<conference id="6">
+		<titre>Le financement des campagnes politiques </titre>
+		<localisation>Maison d'arrêt de la Santé </localisation>
+		<intervenant>Nicolas Sarkozy </intervenant>
+		<datetime>2023-10-19T13:00:00+00:00</datetime>
+	</conference></conferences>

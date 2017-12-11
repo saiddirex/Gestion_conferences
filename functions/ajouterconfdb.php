@@ -29,11 +29,11 @@
 		$newconf->addChild('titre', $_titre);
 		$newconf->addChild('localisation', $_localisation);
 		$newconf->addChild('intervenant', $_intervenant);
-		$newconf->addChild('date', $time->format(DATE_ATOM));
+		$newconf->addChild('datetime', $time->format(DATE_ATOM));
 
 		$xml->asXML("../db/conference.xml");
 		
-		/*header("Location: ../pages/home.php");*/
+		header("Location: ../pages/home.php");
 	}
 ?>
 

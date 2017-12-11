@@ -59,9 +59,15 @@
 			</tr>
 		</thead>
 		<tbody>
-		<?php foreach($xml->children() as $conference) { ?>
+		<?php foreach($xml->children() as $conference) {
+			unset($datetime);
+			$datetime = DateTime::createFromFormat(DATE_ATOM, $conference->datetime);
+		?>
 			<tr>
-				<td style="text-align:left"><span class="	glyphicon glyphicon-time"></span><?php echo $conference->horaire;   ?></td>
+				<td style="text-align:left">
+					<span class="	glyphicon glyphicon-calendar"></span> <?php echo $datetime->format("l d/m/Y");   ?>
+					<br>
+					<span class="	glyphicon glyphicon-time"></span> <?php echo $datetime->format("h:i a");   ?></td>
 				<td style="text-align:left">
 					<table>
 						<tr>
