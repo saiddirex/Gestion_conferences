@@ -2,7 +2,7 @@
 
 // On va chercher le VRAI fichier de fonctions.
 include("functions/functions.php");
-
+include("functions/sort.php");
 
 class DBTest extends PHPUnit_Framework_TestCase
 {
@@ -20,5 +20,21 @@ class DBTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(false, isAdmin("notadmin", "notadmin", $this->db));
         $this->assertEquals(true, isAdmin("admin", "admin", $this->db));
     }
+	
+	public function testSortDB()
+	{
+		sortConf("tests/db/conference.xml", "tests/db/sorted_conference.xml");
+		$xml = simplexml_load_file("tests/db/sorted_conference.xml");
+		
+		$i = 1;
+		foreach($xml->conference as $conf)	// Test the order
+		{
+			$this->assertEquals(strval($i), $conf->titre);
+			$i++;
+		}
+		
+		
+	}
+	
 }
 ?>
