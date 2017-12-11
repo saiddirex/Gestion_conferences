@@ -3,6 +3,8 @@
 
 <?php
 
+	include("sort.php");
+
 	function checkArg($str)
 	{
 		return isset($str) && ! empty($str);
@@ -11,6 +13,7 @@
 	{
 		return htmlspecialchars($_POST[$varname]);
 	}
+	
 	$_id=recupVar("id");
 	$_horaire = recupVar("horaire");
 	$_titre = recupVar("titre");
@@ -32,6 +35,8 @@
 		$newconf->addChild('datetime', $time->format(DATE_ATOM));
 
 		$xml->asXML("../db/conference.xml");
+		
+		sortConf();
 		
 		header("Location: ../pages/home.php");
 	}
