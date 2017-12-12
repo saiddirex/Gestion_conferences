@@ -7,7 +7,7 @@
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
 
-	<title>Ajout de conférence</title>
+	<title>Modifier conférence</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -42,36 +42,37 @@
                        if ($conference['id'] == $_GET['id']) { ?>
 				<form role="form" action="../functions/modifierConf.php?id="<?php echo $_GET['id']; ?>"  method="get">
 					<br style="clear:both">
-					<h2 style="margin-bottom: 25px; text-align: center;"><strong>Modifier une conférence</strong></h2>
+					<h2 style="margin-bottom: 25px ;text-align: center ;"> <strong><?php echo $modifierConference ?></strong></h2>
                     
 					<div class="form-group">
-						<label for="titre"> Id </label>
+						<label for="titre"> <?php echo $id; ?> </label>
 						<input type="text" class="form-control" id="id" name="id" value="<?php echo $conference['id']; ?> " required  readonly>
 					</div>
 					<div class="form-group">
-						<label for="titre"> Titre </label>
-						<input type="text" class="form-control" id="titre" name="titre"  value="<?php echo $conference->titre; ?> " required>
+						<label for="titreFr"> <?php echo $titreFr; ?> </label>
+					    <input type="text" class="form-control" id="titreFr" name="titreFr"  value="<?php echo $conference->titreFr; ?> " required>  
 					</div>
 					<div class="form-group">
-						<label for="lieu"> Lieu </label>
+						<label for="titreEn"> <?php echo $titreEn; ?> </label>
+					    <input type="text" class="form-control" id="titreEn" name="titreEn"  value="<?php echo $conference->titreEn; ?> " required>  
+					</div>
+					<div class="form-group">
+						<label for="lieu"> <?php echo $lieu; ?> </label>
 						<input type="text" class="form-control" id="lieu" name="lieu" value="<?php echo $conference->localisation; ?> " required>
 					</div>
 					<div class="form-group">
-						<label for="intervenant"> Intervenant </label>
+						<label for="intervenant"> <?php echo $nomIntervenant ;?></label>
 						<input type="text" class="form-control" id="intervenant" name="intervenant" value="<?php echo $conference->intervenant; ?> " required>
 					</div>
 					<div class="form-group">
-						<label for="date"> Date </label>
-						<input type="text" class="form-control" id="date" name="date"  value="<?php echo $conference->date; ?> " required>
+						<label for="date"> <?php echo $date;?> </label>
+						<input type="text" class="form-control" id="date" name="date"  value="<?php echo $conference->datetime; ?> " required>
 					</div>
-					<div class="form-group">
-						<label for="horaire"> Horaire </label>
-						<input type="text" class="form-control" id="horaire" name="horaire"  value="<?php echo $conference->horaire; ?> " required>
-					</div>
+					
                        <?php }} ?>
 					   <div class="row">
 							<div class="col-sm-4 col-sm-offset-3">
-							<button type="submit" id="submit" class="btn btn-primary pull-right">SAUVEGARDER</button>
+							<button type="submit" id="submit" class="btn btn-primary pull-right"><?php echo $sauvegarder; ?></button>
 							</div>
                     </div>
 					
