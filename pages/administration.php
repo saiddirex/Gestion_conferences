@@ -44,11 +44,11 @@
 		<?php $xml=simplexml_load_file("../db/conference.xml") or die("Error: Cannot create object");?>
 
 				<div class="row">
-						<div class="col-sm-6 col-sm-offset-2 text">
-								<h1><strong>ZZ_Agenda</strong> Administration Form</h1>
+						<div class="col-sm-10 col-sm-offset-2 text">
+								<h1><strong>ZZ_Agenda</strong> <?php echo $administrationForm ?></h1>
 						</div>
 						<div class="col-sm-2 col-sm-offset-10">
-						<a class="active" href="ajouterConf.php" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> Ajouter</button></a>
+						<a class="active" href="ajouterConf.php?lang=<?php echo $_SESSION['lang']; ?>" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> <?php echo $ajouter ?></button></a>
 
 						</div>
 				</div>
@@ -56,23 +56,27 @@
 				<table class="table">
 						<thead>
 								<tr>
-										<th style="text-align:left">Titre</th>
-										<th style="text-align:left">Nom Intervenant</th>
-										<th style="text-align:left">Localisation</th>
-										<th style="text-align:left">Date</th>
-										<th style="text-align:left">Action</th>
+										<th style="text-align:left"><?php echo $titre ?></th>
+										<th style="text-align:left"><?php echo $nomIntervenant ?></th>
+										<th style="text-align:left"><?php echo $lieu ?></th>
+										<th style="text-align:left"><?php echo $date ?></th>
+										<th style="text-align:left"><?php echo $action ?></th>
 								</tr>
 						</thead>
 						<tbody>
 						<?php foreach($xml->children() as $conference) { ?>
 								<tr>
-										<td style="text-align:left"><?php echo $conference->titre;   ?></td>
+								        <?php if ($_SESSION['lang']=="fr"){ ?>
+											<td style="text-align:left"><?php echo $conference->titreFr;   ?></td>
+										<?php } else { ?>
+											<td style="text-align:left"><?php echo $conference->titreEn;   ?></td>
+										<?php }  ?>
 										<td style="text-align:left"><?php echo $conference->intervenant;   ?></td>
 										<td style="text-align:left"><?php echo $conference->localisation;   ?></td>
-										<td style="text-align:left"><?php echo $conference->date;   ?></td>
+										<td style="text-align:left"><?php echo $conference->datetime;   ?></td>
 										<td style="text-align:left">
-										<a class="active" href="../pages/modifierConfForm.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Modifier</button></a>
-										<a class="active" href="../functions/supprimerConf.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> Supprimer</button></a>
+										<a class="active" href="../pages/modifierConfForm.php?id=<?php echo $conference['id']; ?>&lang=<?php echo $_SESSION['lang'];?>" ><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> <?php echo $modifier ?></button></a>
+										<a class="active" href="../functions/supprimerConf.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> <?php echo $supprimer ?></button></a>
 										</td>
 
 								</tr>
