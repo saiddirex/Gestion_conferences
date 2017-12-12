@@ -35,34 +35,38 @@
 			<div class="form-area">	 
 				<form role="form" action="../functions/ajouterconfdb.php" method="post">
 					<br style="clear:both">
-					<h2 style="margin-bottom: 25px; text-align: center;"><strong>Ajouter une conférence</strong></h2>
+					<h2 style="margin-bottom: 25px; text-align: center;"><strong><?php echo $ajouterConference ?></strong></h2>
 					<div class="form-group">
-						<label for="titre"> Id </label>
+						<label for="titre"> <?php echo $id ?> </label>
 						<input type="text" class="form-control" id="id" name="id" required>
 					</div>
 					<div class="form-group">
-						<label for="titre"> Titre </label>
-						<input type="text" class="form-control" id="titre" name="titre" required>
+						<label for="titreFr"> <?php echo $titreFr ?> </label>
+						<input type="text" class="form-control" id="titreFr" name="titreFr" required>
 					</div>
 					<div class="form-group">
-						<label for="lieu"> Lieu </label>
+						<label for="titreEn"> <?php echo $titreEn ?> </label>
+						<input type="text" class="form-control" id="titreEn" name="titreEn" required>
+					</div>
+					<div class="form-group">
+						<label for="lieu"> <?php echo $lieu ?> </label>
 						<input type="text" class="form-control" id="lieu" name="lieu" required>
 					</div>
 					<div class="form-group">
-						<label for="intervenant"> Intervenant </label>
+						<label for="intervenant"> <?php echo $nomIntervenant ?> </label>
 						<input type="text" class="form-control" id="intervenant" name="intervenant" required>
 					</div>
 					<div class="form-group">
-						<label for="date"> Date </label>
+						<label for="date"> <?php echo $date ?> </label>
 						<input type="date" class="form-control" id="date" name="date" required>
 					</div>
 					<div class="form-group">
-						<label for="horaire"> Horaire </label>
+						<label for="horaire"><?php echo $horaire ?> </label>
 						<input type="time" class="form-control" id="horaire" name="horaire" required>
 					</div>
 					<div class="row">
 							<div class="col-sm-4 col-sm-offset-3">
-							<button type="submit" id="submit" class="btn btn-primary pull-right">Sauvegarder</button>
+							<button type="submit" id="submit" class="btn btn-primary pull-right"><?php echo $sauvegarder ?></button>
 							</div>
                     </div>
 					
