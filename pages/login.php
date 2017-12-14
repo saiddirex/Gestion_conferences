@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 	<meta charset="utf-8">
@@ -27,28 +27,28 @@
 	
 	if(isset($_SESSION["connecte"]))
 	{									// Prevent user from trying to connect when he already is
-		header("Location: ../index.php");
+		header('Location: ../index.php?lang='.$_SESSION["lang"].'');
 	}
 	?>
 
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-4 text">
-			<h1><strong>ZZ_Agenda</strong> Login Form</h1>
+			<h1><strong>ZZ_Agenda  </strong><?php echo $loginForm ?></h1>
 		</div>
 	</div>
 
 	<div class="container">
 		<form  method="post" class="form-signin"  action="../functions/connexion.php" >
 			<label for="login" class="sr-only">Login</label>
-			<input type="text" name="login"class="form-control" placeholder="Veuillez saisir votre login" required>
+			<input type="text" name="login"class="form-control" placeholder="<?php echo $saisirLogin ?>" required>
 			<label for="password" class="sr-only">Password</label>
-			<input type="text" name="password" class="form-control"  placeholder="Veuillez saisir votre mot de passe" required>
+			<input type="text" name="password" class="form-control"  placeholder="<?php echo $saisirMdp ?>" required>
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" value="remember-me"> Remember me
+					<input type="checkbox" value="remember-me"> <?php echo $RememberMe ?>
 				</label>
 			</div> 
-			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit">Log in</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit"><?php echo $Login ?></button>
 		</form>
 
 	</div>

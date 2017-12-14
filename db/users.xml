@@ -15,4 +15,13 @@
 		<login>admin</login>
 		<pwd>8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918</pwd>
 		<admin>true</admin>
-	</user></users>
+	</user>
+	<user id="02fa9c6bd751e63554f7ec444f267f147fed9f73">
+		<fname>said</fname>
+		<name>el farkh</name>
+		<email>said@gmail.com</email>
+		<login>said</login>
+		<pwd>fb46c79b7eb7af175f493755b491afa9b25574a9230b8822c629f224a2df4e58</pwd>
+		<admin>true</admin>
+	</user>
+</users>
