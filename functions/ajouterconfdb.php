@@ -3,24 +3,19 @@
 
 <?php
 
+	session_start();
 	include("sort.php");
-
-	function checkArg($str)
-	{
-		return isset($str) && ! empty($str);
-	}
-	function recupVar($varname)
-	{
-		return htmlspecialchars($_POST[$varname]);
-	}
+	include_once("../functions/functions.php");
 	
-	$_id=recupVar("id");
-	$_titreFr = recupVar("titreFr");
-	$_titreEn = recupVar("titreEn");
-	$_localisation = recupVar("lieu");
-	$_intervenant = recupVar("intervenant");
-	$_date = recupVar("date");
-	$_horaire = recupVar("horaire");
+	requireAdmin();
+	
+	$_id = getVar("id");
+	$_titreFr = getVar("titreFr");
+	$_titreEn = getVar("titreEn");
+	$_localisation = getVar("lieu");
+	$_intervenant = getVar("intervenant");
+	$_date = getVar("date");
+	$_horaire = getVar("horaire");
 	
 
 	if(checkArg($_id) && checkArg($_horaire) && checkArg($_titreFr) && checkArg($_titreEn) && checkArg($_localisation) && checkArg($_intervenant) && checkArg($_date))
@@ -28,7 +23,7 @@
 		$xml = simplexml_load_file("../db/conference.xml");
 		$time = new DateTime($_date . "T" . $_horaire);
 		
-		$newconf=$xml->addChild('conference');
+		$newconf = $xml->addChild('conference');
 		$newconf->addAttribute('id', $_id);
 		$newconf->addChild('titreFr', $_titreFr);
 		$newconf->addChild('titreEn', $_titreEn);

@@ -23,11 +23,18 @@
 	<body>
 
 	<!-- Fixed navbar -->
-	<?php include("header.php"); ?>
+	<?php
+	
+		session_start();
+		include("header.php");
+		include_once("../functions/functions.php");
+		
+		requireAdmin();
+	?>
 	<div class="row">
-					<div class="col-sm-6 col-sm-offset-5 text">
-							<h1><strong><span style="color:red">Z</span>Z_Agenda</strong></h1>
-					</div>
+		<div class="col-sm-6 col-sm-offset-5 text">
+				<h1><strong><span style="color:red">Z</span>Z_Agenda</strong></h1>
+		</div>
    </div>
 
 	<div class="container">

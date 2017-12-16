@@ -1,7 +1,11 @@
 
 <!DOCTYPE HTML>
 <?php
+
 	session_start();
+	include_once("../functions/functions.php");
+	requireAdmin();
+	
 	
 	if(isset($_SESSION['admin']) && isset($_SESSION['connecte']))
 	{
@@ -11,15 +15,15 @@
 		
 		foreach ($obj_xml->conference as $conference)
 		{
-			if ((int)$conference['id'] == (int)$_POST['id'])
+			if ((int)$conference['id'] == (int)getVar('id'))
 			{
 				
-				$time = new DateTime($_POST["date"] . "T" . $_POST["horaire"]);
+				$time = new DateTime(getVar("date") . "T" . getVar("horaire"));
 				
-				$conference->titreFr = $_POST['titreFr'];
-				$conference->titreEn = $_POST['titreEn'];
-				$conference->localisation = $_POST['lieu'];
-				$conference->intervenant = $_POST['intervenant'];
+				$conference->titreFr = getVar('titreFr');
+				$conference->titreEn = getVar('titreEn');
+				$conference->localisation =  getVar('lieu');
+				$conference->intervenant = getVar('intervenant');
 				$conference->datetime = $time->format(DATE_ATOM);
 				
 				$obj_xml->asXML('../db/conference.xml');

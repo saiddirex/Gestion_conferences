@@ -23,12 +23,14 @@
 
 <body>
 	<?php 
-	include("header.php");
 	
-	if(isset($_SESSION["connecte"]))
-	{									// Prevent user from trying to connect when he already is
-		header('Location: ../index.php?lang='.$_SESSION["lang"].'');
-	}
+		session_start();
+		include("header.php");
+	
+		if(isset($_SESSION["connecte"]))
+		{									// Prevent user from trying to connect when he already is
+			header('Location: ../index.php?lang='.$_SESSION["lang"].'');
+		}
 	?>
 
 	<div class="row">

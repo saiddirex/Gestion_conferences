@@ -22,15 +22,14 @@
 	</head>
 
 	<body>
-	
-	<?php include("header.php"); ?>
+
 	<?php
-		if(!isset($_SESSION["connecte"]))
-		{
-			header("Location: ../index.php");
-		}
+		session_start();
+		include("header.php");
+		include_once("../functions/functions.php");
+		
+		requireConnected();
 	?>
-	<!-- Fixed navbar -->
 
 	
 	<div class="container">

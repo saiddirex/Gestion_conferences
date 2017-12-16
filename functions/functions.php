@@ -17,7 +17,7 @@
     }
 
 	// Checks if a user has admin rights or not
-	function isAdmin($login,$pwd, $db = "../db/users.xml")
+	function isAdmin($login, $pwd, $db = "../db/users.xml")
 	{
 		$pwd = hash("sha256", $pwd);
 		
@@ -27,20 +27,39 @@
 		{
 			if($user->login == $login && $user->pwd == $pwd )
 			{
-				if($user->admin == "true") {
-					
+				if($user->admin == "true")
+				{
 					return true;
 				}
-				
 			}
-			
 		}
 		return false;
     }
 	
-	function getPOSTVar($varPOST)
+	function checkArg($str)
+	{
+		return isset($str) && ! empty($str);
+	}
+	function getVar($varPOST)
 	{
 		return htmlspecialchars($_POST[$varPOST]);
+	}
+	
+	function requireConnected()
+	{
+		if(!isset($_SESSION["connecte"]))
+		{
+			header("Location: /Projet/index.php");
+		}
+	}
+
+	function requireAdmin()
+	{
+		requireConnected();
+		if(!isset($_SESSION["admin"]))
+		{
+			header("Location: /Projet/pages/home.php");
+		}
 	}
 	
 ?>

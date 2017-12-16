@@ -23,20 +23,13 @@
 
 	<body>
 
-		<?php include("header.php"); ?>
-		
 		<?php
-		
-			if(!isset($_SESSION["connecte"]))
-			{
-				header("Location: ../index.php");
-			}
-			if(!isset($_SESSION["admin"]))
-			{
-				header("Location: home.php");
-			}
+			session_start();
+			include("header.php"); 
+			include_once("../functions/functions.php");
+			
+			requireAdmin();
 		?>
-		<!-- Fixed navbar -->
 		
 		
 

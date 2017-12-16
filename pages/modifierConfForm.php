@@ -23,16 +23,18 @@
 	<body>
 
 	<!-- Fixed navbar -->
-	<?php 
-	include("header.php"); 
-	$load_xml = simplexml_load_file('../db/conference.xml');
-	$obj_xml = new SimpleXMLElement($load_xml->asXML());
-	
+	<?php
+		session_start();
+		include("header.php");
+		include_once("../functions/functions.php");
+		
+		$load_xml = simplexml_load_file('../db/conference.xml');
+		$obj_xml = new SimpleXMLElement($load_xml->asXML());
 	?>
 	<div class="row">
-					<div class="col-sm-6 col-sm-offset-5 text">
-							<h1><strong><span style="color:red">Z</span>Z_Agenda</strong></h1>
-					</div>
+		<div class="col-sm-6 col-sm-offset-5 text">
+			<h1><strong><span style="color:red">Z</span>Z_Agenda</strong></h1>
+		</div>
    </div>
 
 	<div class="container">
@@ -47,8 +49,7 @@
 					<h2 style="margin-bottom: 25px ;text-align: center ;"> <strong><?php echo $modifierConference ?></strong></h2>
 					
 					<div class="form-group">
-						<label for="titre"> <?php echo $id; ?> </label>
-						<input type="text" class="form-control" id="id" name="id" value="<?php echo $conference['id']; ?> " required  readonly>
+						<input type="text" class="form-control" id="id" name="id" value="<?php echo $conference['id']; ?> " required  readonly hidden>
 					</div>
 					<div class="form-group">
 						<label for="titreFr"> <?php echo $titreFr; ?> </label>

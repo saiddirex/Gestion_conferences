@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ZZ_AGENDA</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ZZ_AGENDA</title>
 
-	<!-- Bootstrap -->
-	<link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">
-	<link href="bootstrap/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="bootstrap\css\jquery.bxslider.css">
-	
+		<!-- Bootstrap -->
+		<link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="bootstrap\css\jquery.bxslider.css">
+		
 
-	<!-- Custom styles for this template -->
-	
+	</head>
 
-</head>
-
-<body>
-<header>
-<?php session_start();
- if (!isset($_GET["lang"])){
-	 $_SESSION["lang"]="fr";
-	 include_once('functions/fr.php');
- }
-elseif ($_GET["lang"]=="fr"){
-	$_SESSION["lang"]="fr";
-	include_once('functions/fr.php');
-
-}else{
-	$_SESSION["lang"]="en";
-	include_once('functions/en.php');
-}
-
-?>  
+	<body>
+	<header>
+		<?php session_start();
+			if(!isset($_GET["lang"]))
+			{
+				$_SESSION["lang"] = "fr";
+				include_once('functions/fr.php');
+			}
+			elseif($_GET["lang"] == "fr")
+			{
+				$_SESSION["lang"] = "fr";
+				include_once('functions/fr.php');
+			}
+			else
+			{
+				$_SESSION["lang"] = "en";
+				include_once('functions/en.php');
+			}
+		?>
         <nav div class="navbar navbar-default navbar-static-top" role="navigation">
         </nav>
 

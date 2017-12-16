@@ -1,18 +1,20 @@
 <?php
-// Start the session
-session_start();
-if (!isset($_GET["lang"])){
-	$_SESSION["lang"]="fr";
-	include_once('../functions/fr.php');
-}
-elseif ($_GET["lang"]=="fr"){
-	$_SESSION["lang"]="fr";
-	include_once('../functions/fr.php');
 
-}else{
-	$_SESSION["lang"]="en";
-	include_once('../functions/en.php');
-}
+	if (!isset($_GET["lang"]))
+	{
+		$_SESSION["lang"] = "fr";
+		include_once('../functions/fr.php');
+	}
+	elseif ($_GET["lang"] == "fr")
+	{
+		$_SESSION["lang"] = "fr";
+		include_once('../functions/fr.php');
+	}
+	else
+	{
+		$_SESSION["lang"] = "en";
+		include_once('../functions/en.php');
+	}
 
 ?>
 
@@ -42,6 +44,9 @@ elseif ($_GET["lang"]=="fr"){
 						<li><a href="?lang=fr"><?php echo $Francais ?></a></li>
 						<li><a href="?lang=en"><?php echo $Anglais ?></a></li>                    
 					</ul>
+				</li>				
+				<li>
+					<a class="nav-link" href="../functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter ?></strong></a>
 				</li>
             </ul>
 		</div>

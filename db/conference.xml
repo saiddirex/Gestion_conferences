@@ -5,13 +5,13 @@
         <titreEn>Big Project Management</titreEn>
         <localisation>Paris</localisation>
         <intervenant>SAID EL FARKH</intervenant>
-        <datetime>2016-07-14T03:45:00+00:00</datetime>
+        <datetime>2016-07-14T02:45:00+02:00</datetime>
     </conference>
     <conference id="4">
         <titreFr>Les effets de la cigarettes</titreFr>
         <titreEn>the effects of the cigarettes</titreEn>
-        <localisation>Clermont-Ferrand </localisation>
-        <intervenant>Pierre DUPUIS </intervenant>
+        <localisation>Clermont-Ferrand</localisation>
+        <intervenant>Pierre DUPUIS</intervenant>
         <datetime>2018-01-05T17:30:00+00:00</datetime>
     </conference>
     <conference id="5">
