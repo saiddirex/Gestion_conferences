@@ -33,7 +33,7 @@
 	?>
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-5 text">
-				<h1><strong><span style="color:red">Z</span>Z_Agenda</strong></h1>
+			<h1><strong><span style="color:red">Z</span>Z_Agenda</strong></h1>
 		</div>
    </div>
 
@@ -54,6 +54,14 @@
 					<div class="form-group">
 						<label for="titreEn"> <?php echo $titreEn ?> </label>
 						<input type="text" class="form-control" id="titreEn" name="titreEn" required>
+					</div>
+					<div class="form-group">
+						<label for="resumeFr"><?php echo $resume . " FR" ?> </label>
+						<textarea class="form-control" id="resumeFr" name="resumeFr" required> </textarea>
+					</div>
+					<div class="form-group">
+						<label for="resumeEn"><?php echo $resume . " EN" ?> </label>
+						<textarea class="form-control" id="resumeEn" name="resumeEn" required> </textarea>
 					</div>
 					<div class="form-group">
 						<label for="lieu"> <?php echo $lieu ?> </label>
@@ -86,54 +94,19 @@
 
 	<br><br><br>
 	<?php include("footer.php"); ?>
+	
 
-
-	<!-- Bootstrap core JavaScript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../js/nicEdit.js"></script>
+	<script type="text/javascript">
+		bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	</script>
 	<script>window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	<script src="../js/bootstrap.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -28,6 +28,7 @@ $titre="Titre";
 $titreFr="Titre En Francais";
 $titreEn="Titre En Anglais";
 $nomIntervenant="Nom Intervenants";
+$resume="Résumé";
 $lieu="Lieu";
 $date="Date";
 $action="Action";

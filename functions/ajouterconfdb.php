@@ -12,14 +12,16 @@
 	$_id = getVar("id");
 	$_titreFr = getVar("titreFr");
 	$_titreEn = getVar("titreEn");
+	$_resumeFr = getVar("resumeFr");
+	$_resumeEn = getVar("resumeEn");
 	$_localisation = getVar("lieu");
 	$_intervenant = getVar("intervenant");
 	$_date = getVar("date");
 	$_horaire = getVar("horaire");
 	
 
-	if(checkArg($_id) && checkArg($_horaire) && checkArg($_titreFr) && checkArg($_titreEn) && checkArg($_localisation) && checkArg($_intervenant) && checkArg($_date))
-	{
+	/*if(checkArg($_id) && checkArg($_horaire) && checkArg($_titreFr) && checkArg($_titreEn) && checkArg($_localisation) && checkArg($_intervenant) && checkArg($_date) && checkArg(resumeEn))
+	{*/
 		$xml = simplexml_load_file("../db/conference.xml");
 		$time = new DateTime($_date . "T" . $_horaire);
 		
@@ -27,6 +29,8 @@
 		$newconf->addAttribute('id', $_id);
 		$newconf->addChild('titreFr', $_titreFr);
 		$newconf->addChild('titreEn', $_titreEn);
+		$newconf->addChild('resumeFr', $_resumeFr);
+		$newconf->addChild('resumeEn', $_resumeEn);
 		$newconf->addChild('localisation', $_localisation);
 		$newconf->addChild('intervenant', $_intervenant);
 		$newconf->addChild('datetime', $time->format(DATE_ATOM));
@@ -36,7 +40,7 @@
 		sortConf();
 		
 		header("Location: ../pages/home.php");
-	}
+	//}
 ?>
 
 

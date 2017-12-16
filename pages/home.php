@@ -71,24 +71,41 @@
 					<table>
 						<tr>
 							<td><strong> <span class="	glyphicon glyphicon-pencil"></span>  <?php echo $titre ?>        :    </strong></td>
-							<?php if ($_SESSION['lang']=="fr"){ ?>
-							<td> <?php  echo $conference->titreFr;  ?></td>
-                            <?php } else { ?>
-							<td> <?php  echo $conference->titreEn;  ?></td>
-							<?php }  ?>
+							<?php
+								if ($_SESSION['lang']=="fr")
+								{
+									echo "<td>" . $conference->titreFr . "</td>";
+								}
+								else
+								{
+									echo "<td>" . $conference->titreEn . "</td>";
+								}
+							?>
 						</tr>
+						
 						<tr>
 							<td><strong><span class="	glyphicon glyphicon-map-marker"></span>  <?php echo $lieu ?>  :  </strong></td>
 							<td> <?php  echo $conference->localisation;  ?></td>
-
 						</tr>
 
 						<tr>
 							<td><strong><span class="	glyphicon glyphicon-user"></span>   <?php echo $nomIntervenant ?>  : </strong></td>
 							<td> <?php  echo $conference->intervenant; ?></td>
-
 						</tr>
-
+						
+						<tr>
+							<td><strong><span class="	glyphicon glyphicon-text"></span>   <?php echo $resume ?>  : </strong></td>
+							<?php
+								if ($_SESSION['lang']=="fr" && $conference->resumeFr != "") // If no FR description is available, shows the english version
+								{ 
+									echo "<td>" . $conference->resumeFr . "</td>";
+								}
+								else
+								{
+									echo "<td>" . $conference->resumeEn . "</td>";
+								}
+							?>
+						</tr>
 
 					</table>
 				</td>

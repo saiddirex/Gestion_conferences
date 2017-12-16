@@ -27,6 +27,7 @@ $titre="Title";
 $titreFr="Title in French";
 $titreEn="Title in English";
 $nomIntervenant="Name of Speaker";
+$resume="Subject";
 $lieu="Place";
 $date="Date";
 $action="Action";
