@@ -10,7 +10,7 @@ An admin user (connected) has the possibility to create an account and choose if
 		<meta name="author" content="">
 		<link rel="icon" href="../../favicon.ico">
 
-		<title><?php echo $formulaireCreationCompte; ?></title>
+		<title>Formulaire Creation Compte</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">

@@ -8,7 +8,7 @@
 		<meta name="author" content="">
 		<link rel="icon" href="../../favicon.ico">
 
-		<title><?php echo $administration; ?></title>
+		<title>Administration</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="../css/administration.css" rel="stylesheet">
