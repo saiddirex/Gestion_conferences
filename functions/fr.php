@@ -1,7 +1,7 @@
 
 <?php
 $GestionDeConférence="Gestion De Conferences";
-$seConnecter="SeConnecter";
+$seConnecter="Se Connecter";
 $pagePricipal="Page Principale";
 $seDeconnecter="Se Deconnecter";
 $creerCompte="Creer Un Compte";
