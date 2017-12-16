@@ -60,6 +60,14 @@
 						<input type="text" class="form-control" id="titreEn" name="titreEn"	 value="<?php echo $conference->titreEn; ?> " required>	 
 					</div>
 					<div class="form-group">
+						<label for="resumeFr"><?php echo $resume . " FR" ?> </label>
+						<textarea class="form-control" id="resumeFr" name="resumeFr" required> <?php echo $conference->resumeFr; ?> </textarea>
+					</div>
+					<div class="form-group">
+						<label for="resumeEn"><?php echo $resume . " EN" ?> </label>
+						<textarea class="form-control" id="resumeEn" name="resumeEn" required> <?php echo $conference->resumeEn; ?> </textarea>
+					</div>
+					<div class="form-group">
 						<label for="lieu"> <?php echo $lieu; ?> </label>
 						<input type="text" class="form-control" id="lieu" name="lieu" value="<?php echo $conference->localisation; ?> " required>
 					</div>
@@ -93,10 +101,10 @@
 	<br><br><br>
 	<?php include("../pages/footer.php"); ?>
 
-
-	<!-- Bootstrap core JavaScript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="../js/nicEdit.js"></script>
+	<script type="text/javascript">
+		bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	</script>
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

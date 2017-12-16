@@ -70,7 +70,7 @@
 				<td style="text-align:left">
 					<table>
 						<tr>
-							<td><strong> <span class="	glyphicon glyphicon-pencil"></span>  <?php echo $titre ?>        :    </strong></td>
+							<td><strong> <span class="glyphicon glyphicon-pencil"></span>  <?php echo $titre ?>        :    </strong></td>
 							<?php
 								if ($_SESSION['lang']=="fr")
 								{
@@ -84,17 +84,17 @@
 						</tr>
 						
 						<tr>
-							<td><strong><span class="	glyphicon glyphicon-map-marker"></span>  <?php echo $lieu ?>  :  </strong></td>
+							<td><strong><span class="glyphicon glyphicon-map-marker"></span>  <?php echo $lieu ?>  :  </strong></td>
 							<td> <?php  echo $conference->localisation;  ?></td>
 						</tr>
 
 						<tr>
-							<td><strong><span class="	glyphicon glyphicon-user"></span>   <?php echo $nomIntervenant ?>  : </strong></td>
+							<td><strong><span class="glyphicon glyphicon-user"></span>   <?php echo $nomIntervenant ?>  : </strong></td>
 							<td> <?php  echo $conference->intervenant; ?></td>
 						</tr>
 						
 						<tr>
-							<td><strong><span class="	glyphicon glyphicon-text"></span>   <?php echo $resume ?>  : </strong></td>
+							<td><strong><span class="glyphicon glyphicon-menu-right"></span>   <?php echo $resume ?>  : </strong></td>
 							<?php
 								if ($_SESSION['lang']=="fr" && $conference->resumeFr != "") // If no FR description is available, shows the english version
 								{ 

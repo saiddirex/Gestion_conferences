@@ -22,9 +22,12 @@
 				
 				$conference->titreFr = getVar('titreFr');
 				$conference->titreEn = getVar('titreEn');
-				$conference->localisation =  getVar('lieu');
+				$conference->resumeFr = $_POST['resumeFr'];
+				$conference->resumeEn = $_POST['resumeEn'];
+				$conference->localisation = getVar('lieu');
 				$conference->intervenant = getVar('intervenant');
 				$conference->datetime = $time->format(DATE_ATOM);
+				
 				
 				$obj_xml->asXML('../db/conference.xml');
 			}
