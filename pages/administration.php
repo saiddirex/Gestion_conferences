@@ -64,7 +64,9 @@
 								</tr>
 						</thead>
 						<tbody>
-						<?php foreach($xml->children() as $conference) { ?>
+						<?php foreach($xml->children() as $conference) { 
+							$datetime = DateTime::createFromFormat(DATE_ATOM, $conference->datetime);
+						?>
 								<tr>
 								        <?php if ($_SESSION['lang']=="fr"){ ?>
 											<td style="text-align:left"><?php echo $conference->titreFr;   ?></td>
@@ -73,7 +75,7 @@
 										<?php }  ?>
 										<td style="text-align:left"><?php echo $conference->intervenant;   ?></td>
 										<td style="text-align:left"><?php echo $conference->localisation;   ?></td>
-										<td style="text-align:left"><?php echo $conference->datetime;   ?></td>
+										<td style="text-align:left"><?php echo $datetime->format("d/m/Y H:i"); ?></td>
 										<td style="text-align:left">
 										<a class="active" href="../pages/modifierConfForm.php?id=<?php echo $conference['id']; ?>&lang=<?php echo $_SESSION['lang'];?>" ><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> <?php echo $modifier ?></button></a>
 										<a class="active" href="../functions/supprimerConf.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> <?php echo $supprimer ?></button></a>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <conferences>
     <conference id="12">
-        <titreFr>Gestion des grands projects </titreFr>
-        <titreEn>Big Project Management </titreEn>
-        <localisation>Paris </localisation>
-        <intervenant>SAID EL FARKH </intervenant>
-        <datetime>2016-07-14T02:45:00+02:00</datetime>
+        <titreFr>Gestion des grands projets</titreFr>
+        <titreEn>Big Project Management</titreEn>
+        <localisation>Paris</localisation>
+        <intervenant>SAID EL FARKH</intervenant>
+        <datetime>2016-07-14T03:45:00+00:00</datetime>
     </conference>
     <conference id="4">
         <titreFr>Les effets de la cigarettes</titreFr>

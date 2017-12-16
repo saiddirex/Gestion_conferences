@@ -15,12 +15,12 @@
 	}
 	
 	$_id=recupVar("id");
-	$_horaire = recupVar("horaire");
 	$_titreFr = recupVar("titreFr");
 	$_titreEn = recupVar("titreEn");
 	$_localisation = recupVar("lieu");
 	$_intervenant = recupVar("intervenant");
 	$_date = recupVar("date");
+	$_horaire = recupVar("horaire");
 	
 
 	if(checkArg($_id) && checkArg($_horaire) && checkArg($_titreFr) && checkArg($_titreEn) && checkArg($_localisation) && checkArg($_intervenant) && checkArg($_date))
