@@ -31,53 +31,62 @@
 			requireAdmin();
 		?>
 		
-		
 
 		<div class="container">
-		<?php $xml=simplexml_load_file("../db/conference.xml") or die("Error: Cannot create object");?>
+			<?php $xml = simplexml_load_file("../db/conference.xml") or die("Error: Cannot create object");?>
 
-				<div class="row">
-						<div class="col-sm-10 col-sm-offset-2 text">
-								<h1><strong>ZZ_Agenda</strong> <?php echo $administrationForm ?></h1>
-						</div>
-						<div class="col-sm-2 col-sm-offset-10">
-						<a class="active" href="ajouterConf.php?lang=<?php echo $_SESSION['lang']; ?>" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> <?php echo $ajouter ?></button></a>
+			<div class="row">
+					<div class="col-sm-10 col-sm-offset-2 text">
+							<h1><strong>ZZ_Agenda</strong> <?php echo $administrationForm ?></h1>
+					</div>
+					<div class="col-sm-2 col-sm-offset-10">
+					<a class="active" href="ajouterconf.php?lang=<?php echo $_SESSION['lang']; ?>" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> <?php echo $ajouter ?></button></a>
 
-						</div>
-				</div>
+					</div>
+			</div>
 
-				<table class="table">
-						<thead>
-								<tr>
-										<th style="text-align:left"><?php echo $titre ?></th>
-										<th style="text-align:left"><?php echo $nomIntervenant ?></th>
-										<th style="text-align:left"><?php echo $lieu ?></th>
-										<th style="text-align:left"><?php echo $date ?></th>
-										<th style="text-align:left"><?php echo $action ?></th>
-								</tr>
-						</thead>
-						<tbody>
-						<?php foreach($xml->children() as $conference) { 
-							$datetime = DateTime::createFromFormat(DATE_ATOM, $conference->datetime);
-						?>
-								<tr>
-								        <?php if ($_SESSION['lang']=="fr"){ ?>
-											<td style="text-align:left"><?php echo $conference->titreFr;   ?></td>
-										<?php } else { ?>
-											<td style="text-align:left"><?php echo $conference->titreEn;   ?></td>
-										<?php }  ?>
-										<td style="text-align:left"><?php echo $conference->intervenant;   ?></td>
-										<td style="text-align:left"><?php echo $conference->localisation;   ?></td>
-										<td style="text-align:left"><?php echo $datetime->format("d/m/Y H:i"); ?></td>
-										<td style="text-align:left">
-										<a class="active" href="../pages/modifierConfForm.php?id=<?php echo $conference['id']; ?>&lang=<?php echo $_SESSION['lang'];?>" ><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> <?php echo $modifier ?></button></a>
-										<a class="active" href="../functions/supprimerConf.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> <?php echo $supprimer ?></button></a>
-										</td>
+			<table class="table">
+				<thead>
+					<tr>
+							<th style="text-align:left"><?php echo $titre ?></th>
+							<th style="text-align:left"><?php echo $nomIntervenant ?></th>
+							<th style="text-align:left"><?php echo $lieu ?></th>
+							<th style="text-align:left"><?php echo $date ?></th>
+							<th style="text-align:left"><?php echo $action ?></th>
+					</tr>
+			</thead>
+			<tbody>
+				<?php foreach($xml->children() as $conference)
+				{ 
+					$datetime = DateTime::createFromFormat(DATE_ATOM, $conference->datetime);
+				?>
+					<tr>
+						<td style="text-align:left">
+							<?php
+							if ($_SESSION['lang'] == "fr")
+							{
+								echo $conference->titreFr;
+							}
+							else
+							{
+								echo $conference->titreEn;
+							}
+							?>
+						</td>
+						<td style="text-align:left"><?php echo $conference->intervenant; ?></td>
+						<td style="text-align:left"><?php echo $conference->localisation; ?></td>
+						<td style="text-align:left"><?php echo $datetime->format("d/m/Y H:i"); ?></td>
+						<td style="text-align:left">
+						<a class="active" href="../pages/modifierConfForm.php?id=<?php echo $conference['id']; ?>&lang=<?php echo $_SESSION['lang'];?>" ><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> <?php echo $modifier ?></button></a>
+						<a class="active" href="../functions/supprimerConf.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> <?php echo $supprimer ?></button></a>
+						</td>
 
-								</tr>
-						<?php } ?>
-						</tbody>
-				</table>
+					</tr>
+				<?php
+				}
+				?>
+				</tbody>
+			</table>
 		</div>
 
 		<br><br><br><br><br>

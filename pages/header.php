@@ -45,9 +45,11 @@
 						<li><a href="?lang=en"><?php echo $Anglais ?></a></li>                    
 					</ul>
 				</li>				
-				<li>
-					<a class="nav-link" href="../functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter ?></strong></a>
-				</li>
+				<?php if (isset($_SESSION["connecte"])){?>
+					<li>
+						<a class="nav-link" href="../functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter ?></strong></a>
+					</li>
+				<?php } ?>
             </ul>
 		</div>
 </nav>

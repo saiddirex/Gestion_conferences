@@ -19,9 +19,8 @@
 	$_date = getVar("date");
 	$_horaire = getVar("horaire");
 	
-
-	/*if(checkArg($_id) && checkArg($_horaire) && checkArg($_titreFr) && checkArg($_titreEn) && checkArg($_localisation) && checkArg($_intervenant) && checkArg($_date) && checkArg(resumeEn))
-	{*/
+	if(checkArgs(array($_id, $_titreFr, $_titreEn, $_titreEn, $_resumeFr, $_resumeEn, $_localisation, $_intervenant, $_date, $_horaire)))
+	{
 		$xml = simplexml_load_file("../db/conference.xml");
 		$time = new DateTime($_date . "T" . $_horaire);
 		
@@ -40,7 +39,11 @@
 		sortConf();
 		
 		header("Location: ../pages/home.php");
-	//}
+	}
+	else
+	{
+		header("Location: ../pages/home.php");
+	}
 ?>
 
 

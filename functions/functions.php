@@ -40,6 +40,16 @@
 	{
 		return isset($str) && ! empty($str);
 	}
+	function checkArgs($arr)
+	{
+		$count = count($array);
+		$valid = true;
+		for ($i = 0; $i < $count && $valid; $i++)
+		{
+			$valid = checkArg($arr[$i]);
+		}
+		return $valid;
+	}
 	function getVar($varPOST)
 	{
 		return htmlspecialchars($_POST[$varPOST]);

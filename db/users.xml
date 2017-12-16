@@ -24,4 +24,4 @@
 		<pwd>fb46c79b7eb7af175f493755b491afa9b25574a9230b8822c629f224a2df4e58</pwd>
 		<admin>true</admin>
 	</user>
-<user id="f5d8a681bdb5b9dee79e286640dc6cfb0dd7e1c0"><fname>Machin</fname><name>Bidule</name><email>Truc@gmail.com</email><login>lol</login><pwd>07123e1f482356c415f684407a3b8723e10b2cbbc0b8fcd6282c49d37c9c1abc</pwd><admin>false</admin></user></users>
+<user id="f5d8a681bdb5b9dee79e286640dc6cfb0dd7e1c0"><fname>Machin</fname><name>Bidule</name><email>Truc@gmail.com</email><login>lol</login><pwd>07123e1f482356c415f684407a3b8723e10b2cbbc0b8fcd6282c49d37c9c1abc</pwd><admin>false</admin></user><user id="715858196904c791cd963cc6096fb6df7d2e2901"><fname>David</fname><name>Santiago</name><email>david@david.david</email><login>david</login><pwd>07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e</pwd><admin>true</admin></user></users>
