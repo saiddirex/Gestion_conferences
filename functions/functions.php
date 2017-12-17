@@ -66,7 +66,7 @@
 	{
 		if(!isset($_SESSION["connecte"]))
 		{
-			header("Location: /ICW-Project/index.php");
+			header("Location: ../index.php");
 		}
 	}
 
@@ -76,7 +76,7 @@
 		requireConnected();
 		if(!isset($_SESSION["admin"]))
 		{
-			header("Location: /ICW-Project/pages/home.php");
+			header("Location: ../pages/home.php");
 		}
 	}
 	
