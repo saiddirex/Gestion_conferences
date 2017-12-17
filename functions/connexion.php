@@ -3,16 +3,19 @@
 	session_start();
 	
 	include("functions.php");
+	include_once("../functions/functions.php");
 
 	if(isset($_POST['submit']))
 	{
 		
-		if( isUser(getPOSTVar('login'), getPOSTVar('password')) )
+		if( isUser(getVar('login'), getVar('password')) )
 		{
-			// Créé la variable. Valeurs inutiles
+			// Create the variable(s). Value is useless
+			// User is connected
 			$_SESSION['connecte'] = 0;
-			if( isAdmin(getPOSTVar('login'),getPOSTVar('password')) )
+			if( isAdmin(getVar('login'), getVar('password')) )
 			{
+				// User is an admin
 				$_SESSION['admin'] = 0;
 				header('Location: ../pages/administration.php');
 			}

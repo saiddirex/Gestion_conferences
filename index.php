@@ -1,40 +1,40 @@
 <!DOCTYPE html>
+<!-- Welcome page. Available for everyone -->
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ZZ_AGENDA</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ZZ_AGENDA</title>
 
-	<!-- Bootstrap -->
-	<link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">
-	<link href="bootstrap/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="bootstrap\css\jquery.bxslider.css">
-	
+		<!-- Bootstrap -->
+		<link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="bootstrap\css\jquery.bxslider.css">
+		
 
-	<!-- Custom styles for this template -->
-	
+	</head>
 
-</head>
-
-<body>
-<header>
-<?php session_start();
- if (!isset($_GET["lang"])){
-	 $_SESSION["lang"]="fr";
-	 include_once('functions/fr.php');
- }
-elseif ($_GET["lang"]=="fr"){
-	$_SESSION["lang"]="fr";
-	include_once('functions/fr.php');
-
-}else{
-	$_SESSION["lang"]="en";
-	include_once('functions/en.php');
-}
-
-?>  
+	<body>
+	<header>
+		<?php session_start();
+			if(!isset($_GET["lang"]))
+			{
+				$_SESSION["lang"] = "fr";
+				include_once('functions/fr.php');
+			}
+			elseif($_GET["lang"] == "fr")
+			{
+				$_SESSION["lang"] = "fr";
+				include_once('functions/fr.php');
+			}
+			else
+			{
+				$_SESSION["lang"] = "en";
+				include_once('functions/en.php');
+			}
+		?>
         <nav div class="navbar navbar-default navbar-static-top" role="navigation">
         </nav>
 
@@ -45,7 +45,7 @@ elseif ($_GET["lang"]=="fr"){
 
                         <div class="navbar-brand">
                             <a>
-                                <h1><?php echo $GestionDeConférence ?></h1>
+                                <h1><?php echo $GestionDeConference; ?></h1>
                             </a>
                         </div>
                     </div>
@@ -54,12 +54,12 @@ elseif ($_GET["lang"]=="fr"){
                         <div class="menu">
                             <ul class="nav nav-tabs" role="tablist">
 							<?php if(!isset($_SESSION['connecte'])){?>   
-                                <li role="presentation"><a class="active" href="pages/login.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seConnecter ?></strong></a></li>
+                                <li role="presentation"><a class="active" href="pages/login.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seConnecter; ?></strong></a></li>
                             <?php }else{ ?>  
-								<li role="presentation"><a class="active" href="pages/home.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $pagePricipal ?></strong></a></li>
-                                <li role="presentation"><a class="active" href="functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter ?></strong></a></li>
+								<li role="presentation"><a class="active" href="pages/home.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $pagePricipal; ?></strong></a></li>
+                                <li role="presentation"><a class="active" href="functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter; ?></strong></a></li>
                             <?php } ?>
-                                <li role="presentation"><a class="active" href="pages/signin.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $creerCompte ?></strong></a></li>
+                                <li role="presentation"><a class="active" href="pages/signin.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $creerCompte; ?></strong></a></li>
 
                             </ul>
                         </div>
@@ -71,7 +71,7 @@ elseif ($_GET["lang"]=="fr"){
 
 
 	<div class="jumbotron">
-		<h2><?php echo $apropos ?></h2>
+		<h2><?php echo $apropos; ?></h2>
 	</div>
 
 	<div class="slider">
@@ -93,7 +93,7 @@ elseif ($_GET["lang"]=="fr"){
 						<div class="services ">
 							<div class="icons">
 								<i class="fa fa-cog fa-3x"></i>
-								<h3><?php echo $createurSite ?></h3>
+								<h3><?php echo $createurSite; ?></h3>
 								<p id="demo1" class="content">
 									<strong> Said EL FARKH </strong><br>
 									<strong> Pierre DUPUIS </strong>
@@ -108,7 +108,7 @@ elseif ($_GET["lang"]=="fr"){
 						<div class="services">
 							<div class="icons">
 								<i class="fa fa-key fa-3x"></i>
-								<h3><?php echo $encadrant ?></h3>
+								<h3><?php echo $encadrant; ?></h3>
 								<p id="demo2" class="content">
 									<strong> M. David SANTIAGO</strong>
 								</p>
@@ -123,9 +123,9 @@ elseif ($_GET["lang"]=="fr"){
 						<div class="services">
 							<div class="icons">
 								<i class="fa fa-refresh fa-3x"></i>
-								<h3><?php echo $MAJ ?></h3>
+								<h3><?php echo $MAJ; ?></h3>
 								<p id="demo3" class="content">
-									<strong> <?php echo date("Y-m-d") ?></strong>
+									<strong> <?php echo date("Y-m-d"); ?></strong>
 								</p>
 							</div>
 						</div>

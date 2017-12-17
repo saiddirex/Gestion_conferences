@@ -3,7 +3,8 @@
 <!DOCTYPE HTML>
 
 <?php
-
+	
+	// sort the database according to date & time
 	function sortConf($db_in = "../db/conference.xml", $db_out = "../db/conference.xml")
 	{
 		$xml = simplexml_load_file($db_in);
@@ -27,13 +28,13 @@
 		// Add the sorted array elements to a new SimpleXMLElement structure
 		foreach($tosort_array as $elem)
 		{
-			$newChild = $sorted_xml->addChild("conference");	// Adds a new child (conference)
+			$newChild = $sorted_xml->addChild("conference");	// Add a new child (conference)
 			
-			foreach($elem->attributes() as $attr => $value)		// Adds the attributes of the element
+			foreach($elem->attributes() as $attr => $value)		// Add the attributes of the element
 			{
 				$newChild->addAttribute($attr, $value);
 			}
-			foreach($elem->children() as $child)				// Adds the sub-elements
+			foreach($elem->children() as $child)				// Add the sub-elements
 			{
 				$newChild->addChild($child->getName(), $child);
 			}

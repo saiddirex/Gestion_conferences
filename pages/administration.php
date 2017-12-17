@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This page allows an admin user to create, modify, delete a conference -->
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -7,7 +8,7 @@
 		<meta name="author" content="">
 		<link rel="icon" href="../../favicon.ico">
 
-		<title>Administration</title>
+		<title><?php echo $administration; ?></title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="../css/administration.css" rel="stylesheet">
@@ -23,66 +24,71 @@
 
 	<body>
 
-		<?php include("header.php"); ?>
-		
 		<?php
-		
-			if(!isset($_SESSION["connecte"]))
-			{
-				header("Location: ../index.php");
-			}
-			if(!isset($_SESSION["admin"]))
-			{
-				header("Location: home.php");
-			}
+			session_start();
+			include("header.php"); 
+			include_once("../functions/functions.php");
+			
+			requireAdmin();
 		?>
-		<!-- Fixed navbar -->
-		
 		
 
 		<div class="container">
-		<?php $xml=simplexml_load_file("../db/conference.xml") or die("Error: Cannot create object");?>
+			<?php $xml = simplexml_load_file("../db/conference.xml") or die("Error: Cannot create object");?>
 
-				<div class="row">
-						<div class="col-sm-10 col-sm-offset-2 text">
-								<h1><strong>ZZ_Agenda</strong> <?php echo $administrationForm ?></h1>
-						</div>
-						<div class="col-sm-2 col-sm-offset-10">
-						<a class="active" href="ajouterConf.php?lang=<?php echo $_SESSION['lang']; ?>" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> <?php echo $ajouter ?></button></a>
+			<div class="row">
+					<div class="col-sm-10 col-sm-offset-2 text">
+							<h1><strong>ZZ_Agenda</strong> <?php echo $administrationForm; ?></h1>
+					</div>
+					<div class="col-sm-2 col-sm-offset-10">
+					<a class="active" href="ajouterConf.php?lang=<?php echo $_SESSION['lang']; ?>" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> <?php echo $ajouter; ?></button></a>
 
-						</div>
-				</div>
+					</div>
+			</div>
 
-				<table class="table">
-						<thead>
-								<tr>
-										<th style="text-align:left"><?php echo $titre ?></th>
-										<th style="text-align:left"><?php echo $nomIntervenant ?></th>
-										<th style="text-align:left"><?php echo $lieu ?></th>
-										<th style="text-align:left"><?php echo $date ?></th>
-										<th style="text-align:left"><?php echo $action ?></th>
-								</tr>
-						</thead>
-						<tbody>
-						<?php foreach($xml->children() as $conference) { ?>
-								<tr>
-								        <?php if ($_SESSION['lang']=="fr"){ ?>
-											<td style="text-align:left"><?php echo $conference->titreFr;   ?></td>
-										<?php } else { ?>
-											<td style="text-align:left"><?php echo $conference->titreEn;   ?></td>
-										<?php }  ?>
-										<td style="text-align:left"><?php echo $conference->intervenant;   ?></td>
-										<td style="text-align:left"><?php echo $conference->localisation;   ?></td>
-										<td style="text-align:left"><?php echo $conference->datetime;   ?></td>
-										<td style="text-align:left">
-										<a class="active" href="../pages/modifierConfForm.php?id=<?php echo $conference['id']; ?>&lang=<?php echo $_SESSION['lang'];?>" ><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> <?php echo $modifier ?></button></a>
-										<a class="active" href="../functions/supprimerConf.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> <?php echo $supprimer ?></button></a>
-										</td>
+			<table class="table">
+				<thead>
+					<tr>
+							<th style="text-align:left"><?php echo $titre; ?></th>
+							<th style="text-align:left"><?php echo $nomIntervenant; ?></th>
+							<th style="text-align:left"><?php echo $lieu; ?></th>
+							<th style="text-align:left"><?php echo $date; ?></th>
+							<th style="text-align:left"><?php echo $action; ?></th>
+					</tr>
+			</thead>
+			<tbody>
+				<!-- Generate the list of conferences to manage -->
+				<?php foreach($xml->children() as $conference)
+				{ 
+					$datetime = DateTime::createFromFormat(DATE_ATOM, $conference->datetime);
+				?>
+					<tr>
+						<td style="text-align:left">
+							<?php
+							if ($_SESSION['lang'] == "fr")
+							{
+								echo $conference->titleFr;
+							}
+							else
+							{
+								echo $conference->titleEn;
+							}
+							?>
+						</td>
+						<td style="text-align:left"><?php echo $conference->speaker; ?></td>
+						<td style="text-align:left"><?php echo $conference->location; ?></td>
+						<td style="text-align:left"><?php echo $datetime->format("d/m/Y H:i"); ?></td>
+						<td style="text-align:left">
+						<a class="active" href="../pages/modifierConfForm.php?id=<?php echo $conference['id']; ?>&lang=<?php echo $_SESSION['lang'];?>" ><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> <?php echo $modifier; ?></button></a>
+						<a class="active" href="../functions/supprimerConf.php?id=<?php echo $conference['id']; ?>" ><button type="button" class="btn btn-danger  btn-sm"><span class="glyphicon glyphicon-remove"></span> <?php echo $supprimer; ?></button></a>
+						</td>
 
-								</tr>
-						<?php } ?>
-						</tbody>
-				</table>
+					</tr>
+				<?php
+				}
+				?>
+				</tbody>
+			</table>
 		</div>
 
 		<br><br><br><br><br>
@@ -96,7 +102,7 @@
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script>window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script src="../js/bootstrap.min.js"></script>
+
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	</body>

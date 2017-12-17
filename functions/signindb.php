@@ -1,20 +1,14 @@
 <?php
 
-	function checkArg($str)
-	{
-		return isset($str) && ! empty($str);
-	}
-	function recupVar($varname)
-	{
-		return htmlspecialchars($_POST[$varname]);
-	}
+	include_once("../functions/functions.php");
 	
-	$_fname = recupVar("fname");
-	$_name = recupVar("name");
-	$_email = recupVar("email");
-	$_pwd = hash("sha256", recupVar("pwd"));
-	$_login = recupVar("login");
-	if(recupVar("admin") == "on")
+	$_fname = getVar("fname");
+	$_name = getVar("name");
+	$_email = getVar("email");
+	$_pwd = hash("sha256", getVar("pwd"));
+	$_login = getVar("login");
+	
+	if(getVar("admin") == "on")
 	{
 		$_admin = "true";
 	}
@@ -24,7 +18,7 @@
 	}
 	
 
-	if(checkArg($_fname) && checkArg($_name) && checkArg($_email) && checkArg($_pwd) && checkArg($_login))
+	if(checkArgs(array($_fname, $_name, $_email, $_pwd, $_login)))
 	{
 		$_id = hash("sha1", $_email);
 		$xml = simplexml_load_file("../db/users.xml");

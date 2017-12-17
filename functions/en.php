@@ -1,5 +1,5 @@
 <?php
-$GestionDeConférence="Conference Management";
+$GestionDeConference="Conference Management";
 $seConnecter="Log In";
 $pagePricipal="Home";
 $seDeconnecter="Log Out";
@@ -20,13 +20,14 @@ $loginForm="Login Form";
 $saisirLogin="please enter your login";
 $saisirMdp="please enter your password";
 $RememberMe="Remember me";
-$Login="Login";
+$login="Login";
 $administrationForm="Adminisration Form";
 $ajouter="Add";
 $titre="Title";
-$titreFr="Title in French";
-$titreEn="Title in English";
+$titleFr="Title in French";
+$titleEn="Title in English";
 $nomIntervenant="Name of Speaker";
+$resume="Subject";
 $lieu="Place";
 $date="Date";
 $action="Action";
