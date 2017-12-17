@@ -1,2 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<conferences><conference id="12"><titleFr>Gestion des grands projets    </titleFr><titleEn>Big Project Management    </titleEn><descFr> bla bla bla </descFr><descEn>  bla bla bla </descEn><location>Paris    </location><speaker>SAID EL FARKH    </speaker><datetime>2016-07-14T02:00:00+02:00</datetime></conference><conference id="4"><titleFr>Les effets de la cigarettes</titleFr><titleEn>the effects of the cigarettes</titleEn><descFr>Bla bla bla</descFr><descEn/><location>Clermont-Ferrand</location><speaker>Pierre DUPUIS</speaker><datetime>2018-01-05T17:30:00+00:00</datetime></conference><conference id="5"><titleFr>Le terrorisme</titleFr><titleEn>The Terrorism</titleEn><descFr>Bla bla bla</descFr><descEn/><location>Paris</location><speaker>Said EL FARKH</speaker><datetime>2018-01-05T20:00:00+00:00</datetime></conference><conference id="6"><titleFr>Effet de serre</titleFr><titleEn>Global Warming</titleEn><descFr>Bla bla bla</descFr><descEn/><location>paris</location><speaker>said El farkh</speaker><datetime>2018-01-05T21:00:00+00:00</datetime></conference><conference id="10"><titleFr>Comment conquérir la terre? </titleFr><titleEn>How to conquer Earth? </titleEn><descFr> Ou pourquoi il ne faut pas envoyer des gens le faire à sa place. </descFr><descEn> Or why you will have to get off your chair and do things by yourself </descEn><location>Earth </location><speaker>Thanos </speaker><datetime>2018-04-25T08:00:00+00:00</datetime></conference><conference id="8"><titleFr>Le financement des campagnes politiques</titleFr><titleEn>financing of political campaigns</titleEn><descFr>Bla bla bla</descFr><descEn/><location>Maison d'arrêt de la Santé</location><speaker>Nicolas Sarkozy</speaker><datetime>2023-10-19T13:00:00+00:00</datetime></conference></conferences>
+<conferences>
+	<conference id="12">
+		<titleFr>Gestion des grands projets    </titleFr>
+		<titleEn>Big Project Management    </titleEn>
+		<descFr> bla bla bla </descFr>
+		<descEn>  bla bla bla </descEn>
+		<location>Paris    </location>
+		<speaker>SAID EL FARKH    </speaker>
+		<datetime>2016-07-14T02:00:00+02:00</datetime>
+	</conference>
+	<conference id="4">
+		<titleFr>Les effets de la cigarettes</titleFr>
+		<titleEn>the effects of the cigarettes</titleEn>
+		<descFr>Bla bla bla</descFr>
+		<descEn/>
+		<location>Clermont-Ferrand</location>
+		<speaker>Pierre DUPUIS</speaker>
+		<datetime>2018-01-05T17:30:00+00:00</datetime>
+	</conference>
+	<conference id="5">
+		<titleFr>Le terrorisme</titleFr>
+		<titleEn>The Terrorism</titleEn>
+		<descFr>Bla bla bla</descFr>
+		<descEn/>
+		<location>Paris</location>
+		<speaker>Said EL FARKH</speaker>
+		<datetime>2018-01-05T20:00:00+00:00</datetime>
+	</conference>
+	<conference id="6">
+		<titleFr>Effet de serre</titleFr>
+		<titleEn>Global Warming</titleEn>
+		<descFr>Bla bla bla</descFr>
+		<descEn/>
+		<location>paris</location>
+		<speaker>said El farkh</speaker>
+		<datetime>2018-01-05T21:00:00+00:00</datetime>
+	</conference>
+	<conference id="10">
+		<titleFr>Comment conquérir la terre? </titleFr>
+		<titleEn>How to conquer Earth? </titleEn>
+		<descFr> Ou pourquoi il ne faut pas envoyer des gens le faire à sa place. </descFr>
+		<descEn> Or why you will have to get off your chair and do things by yourself </descEn>
+		<location>Earth </location>
+		<speaker>Thanos </speaker>
+		<datetime>2018-04-25T08:00:00+00:00</datetime>
+	</conference>
+	<conference id="8">
+		<titleFr>Le financement des campagnes politiques</titleFr>
+		<titleEn>financing of political campaigns</titleEn>
+		<descFr>Bla bla bla</descFr>
+		<descEn/>
+		<location>Maison d'arrêt de la Santé</location>
+		<speaker>Nicolas Sarkozy</speaker>
+		<datetime>2023-10-19T13:00:00+00:00</datetime>
+	</conference>
+</conferences>
