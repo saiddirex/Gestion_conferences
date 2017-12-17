@@ -41,7 +41,7 @@
 							<h1><strong>ZZ_Agenda</strong> <?php echo $administrationForm; ?></h1>
 					</div>
 					<div class="col-sm-2 col-sm-offset-10">
-					<a class="active" href="ajouterConf.php?lang=<?php echo $_SESSION['lang']; ?>" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> <?php echo $ajouter; ?></button></a>
+					<a class="active" href="ajouterconf.php?lang=<?php echo $_SESSION['lang']; ?>" ><button type="button" class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-plus"></span> <?php echo $ajouter; ?></button></a>
 
 					</div>
 			</div>
