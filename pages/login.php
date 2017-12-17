@@ -46,11 +46,6 @@
 				<input type="text" name="login" id="login" class="form-control" placeholder="<?php echo $saisirLogin ?>" required>
 				<label for="password" class="sr-only">Password</label>
 				<input type="password" name="password" class="form-control"  placeholder="<?php echo $saisirMdp ?>" required>
-				<!--<div class="checkbox">
-					<label>
-						<input type="checkbox" value="remember-me"> <?php echo $RememberMe; ?>
-					</label>
-				</div> -->
 				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit" onclick='rememberLogin()'><?php echo $login; ?></button>
 			</form>
 
