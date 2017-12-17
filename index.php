@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Welcome page. Available for everyone -->
 <html lang="en">
 
 	<head>
@@ -44,7 +45,7 @@
 
                         <div class="navbar-brand">
                             <a>
-                                <h1><?php echo $GestionDeConférence ?></h1>
+                                <h1><?php echo $GestionDeConference; ?></h1>
                             </a>
                         </div>
                     </div>
@@ -53,12 +54,12 @@
                         <div class="menu">
                             <ul class="nav nav-tabs" role="tablist">
 							<?php if(!isset($_SESSION['connecte'])){?>   
-                                <li role="presentation"><a class="active" href="pages/login.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seConnecter ?></strong></a></li>
+                                <li role="presentation"><a class="active" href="pages/login.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seConnecter; ?></strong></a></li>
                             <?php }else{ ?>  
-								<li role="presentation"><a class="active" href="pages/home.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $pagePricipal ?></strong></a></li>
-                                <li role="presentation"><a class="active" href="functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter ?></strong></a></li>
+								<li role="presentation"><a class="active" href="pages/home.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $pagePricipal; ?></strong></a></li>
+                                <li role="presentation"><a class="active" href="functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter; ?></strong></a></li>
                             <?php } ?>
-                                <li role="presentation"><a class="active" href="pages/signin.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $creerCompte ?></strong></a></li>
+                                <li role="presentation"><a class="active" href="pages/signin.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $creerCompte; ?></strong></a></li>
 
                             </ul>
                         </div>
@@ -70,7 +71,7 @@
 
 
 	<div class="jumbotron">
-		<h2><?php echo $apropos ?></h2>
+		<h2><?php echo $apropos; ?></h2>
 	</div>
 
 	<div class="slider">
@@ -92,7 +93,7 @@
 						<div class="services ">
 							<div class="icons">
 								<i class="fa fa-cog fa-3x"></i>
-								<h3><?php echo $createurSite ?></h3>
+								<h3><?php echo $createurSite; ?></h3>
 								<p id="demo1" class="content">
 									<strong> Said EL FARKH </strong><br>
 									<strong> Pierre DUPUIS </strong>
@@ -107,7 +108,7 @@
 						<div class="services">
 							<div class="icons">
 								<i class="fa fa-key fa-3x"></i>
-								<h3><?php echo $encadrant ?></h3>
+								<h3><?php echo $encadrant; ?></h3>
 								<p id="demo2" class="content">
 									<strong> M. David SANTIAGO</strong>
 								</p>
@@ -122,9 +123,9 @@
 						<div class="services">
 							<div class="icons">
 								<i class="fa fa-refresh fa-3x"></i>
-								<h3><?php echo $MAJ ?></h3>
+								<h3><?php echo $MAJ; ?></h3>
 								<p id="demo3" class="content">
-									<strong> <?php echo date("Y-m-d") ?></strong>
+									<strong> <?php echo date("Y-m-d"); ?></strong>
 								</p>
 							</div>
 						</div>

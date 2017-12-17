@@ -1,6 +1,6 @@
 
 <?php
-$GestionDeConférence="Gestion De Conferences";
+$GestionDeConference="Gestion De Conferences";
 $seConnecter="Se Connecter";
 $pagePricipal="Page Principale";
 $seDeconnecter="Se Deconnecter";
@@ -11,7 +11,7 @@ $encadrant="Professeur Encadrants";
 $MAJ="Dernière MAJ";
 $carte="Carte";
 $administration="Administration";
-$Language ="Language";
+$Language="Language";
 $Francais="Francais";
 $Anglais="Anglais";
 $Nous_contacter ="Nous Contacter";
@@ -21,12 +21,12 @@ $loginForm="Formulaire de Connexion";
 $saisirLogin="Veuillez saisir votre login";
 $saisirMdp="Veuillez saisir votre mdp";
 $RememberMe="Se Rappeler du Mot de passe";
-$Login="Connexion";
+$login="Connexion";
 $administrationForm="Formulaire d'Administration";
 $ajouter="Ajouter";
 $titre="Titre";
-$titreFr="Titre En Francais";
-$titreEn="Titre En Anglais";
+$titleFr="Titre En Francais";
+$titleEn="Titre En Anglais";
 $nomIntervenant="Nom Intervenants";
 $resume="Résumé";
 $lieu="Lieu";

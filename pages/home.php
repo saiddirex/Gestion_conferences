@@ -1,24 +1,25 @@
 <!DOCTYPE html>
+<!-- This page shows the list of conference and is only available to connected users -->
 <html lang="en">
-  <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="icon" href="../../favicon.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
 
-	<title>Home</title>
+		<title>Home</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="../css/home.css" rel="stylesheet">
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="../css/home.css" rel="stylesheet">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -50,13 +51,14 @@
 		
 			<thead>
 				<tr>
-					<th style="text-align:left"><?php echo $horaire ?></th>
-					<th style="text-align:left"><?php echo $details ?></th>
+					<th style="text-align:left"><?php echo $horaire; ?></th>
+					<th style="text-align:left"><?php echo $details; ?></th>
 					<th style="text-align:left"></th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php
+				// Generates the list of conferences
 				foreach($xml->children() as $conference)
 				{
 					unset($datetime);
@@ -70,40 +72,44 @@
 						</td>
 						<td style="text-align:left">
 							<table>
+								<!-- Title -->
 								<tr>
 									<td><strong> <span class="glyphicon glyphicon-pencil"></span>  <?php echo $titre ?>        :    </strong></td>
 									<?php
 										if ($_SESSION['lang']=="fr")
 										{
-											echo "<td>" . $conference->titreFr . "</td>";
+											echo "<td>" . $conference->titleFr . "</td>";
 										}
 										else
 										{
-											echo "<td>" . $conference->titreEn . "</td>";
+											echo "<td>" . $conference->titleEn . "</td>";
 										}
 									?>
 								</tr>
 								
+								<!-- Location -->
 								<tr>
-									<td><strong><span class="glyphicon glyphicon-map-marker"></span>  <?php echo $lieu ?>  :  </strong></td>
-									<td> <?php  echo $conference->localisation;  ?></td>
-								</tr>
-
-								<tr>
-									<td><strong><span class="glyphicon glyphicon-user"></span>   <?php echo $nomIntervenant ?>  : </strong></td>
-									<td> <?php  echo $conference->intervenant; ?></td>
+									<td><strong><span class="glyphicon glyphicon-map-marker"></span>  <?php echo $lieu; ?>  :  </strong></td>
+									<td> <?php  echo $conference->location;  ?></td>
 								</tr>
 								
+								<!-- Speaker -->
 								<tr>
-									<td><strong><span class="glyphicon glyphicon-menu-right"></span>   <?php echo $resume ?>  : </strong></td>
+									<td><strong><span class="glyphicon glyphicon-user"></span>   <?php echo $nomIntervenant; ?>  : </strong></td>
+									<td> <?php  echo $conference->speaker; ?></td>
+								</tr>
+								
+								<!-- Description -->
+								<tr>
+									<td><strong><span class="glyphicon glyphicon-menu-right"></span>   <?php echo $resume; ?>  : </strong></td>
 									<?php
-										if ($_SESSION['lang']=="fr" && $conference->resumeFr != "") // If no FR description is available, shows the english version
+										if ($_SESSION['lang']=="fr" && !empty($conference->descFr)) // If no FR description is available, shows the english version
 										{ 
-											echo "<td>" . $conference->resumeFr . "</td>";
+											echo "<td>" . $conference->descFr . "</td>";
 										}
 										else
 										{
-											echo "<td>" . $conference->resumeEn . "</td>";
+											echo "<td>" . $conference->descEn . "</td>";
 										}
 									?>
 								</tr>

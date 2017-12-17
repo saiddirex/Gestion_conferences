@@ -1,5 +1,6 @@
 <?php
 	
+	// Checks if the given login/pwd match a user in the "database"
 	function isUser($id, $pwd, $db = "../db/users.xml")
 	{
 		$pwd = hash("sha256", $pwd);
@@ -36,25 +37,31 @@
 		return false;
     }
 	
+	// Check if a variable is undefined/empty
 	function checkArg($str)
 	{
 		return isset($str) && ! empty($str);
 	}
+	
+	//  Check if one of the variables given as an array is undefined/empty
 	function checkArgs($arr)
 	{
-		$count = count($array);
+		$nb = count($arr);
 		$valid = true;
-		for ($i = 0; $i < $count && $valid; $i++)
+		for ($i = 0; $i < $nb && $valid; $i++)
 		{
 			$valid = checkArg($arr[$i]);
 		}
 		return $valid;
 	}
+	
+	// return the POST variable
 	function getVar($varPOST)
 	{
 		return htmlspecialchars($_POST[$varPOST]);
 	}
 	
+	// Check that the user is connected. If not, redirect to the first page
 	function requireConnected()
 	{
 		if(!isset($_SESSION["connecte"]))
@@ -63,6 +70,7 @@
 		}
 	}
 
+	// Check that the user is connected and an admin. If not, redirect to the Home page
 	function requireAdmin()
 	{
 		requireConnected();

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This page allow someone to login to his account -->
 <html>
 
 	<head>
@@ -8,7 +9,7 @@
 		<meta name="author" content="">
 		<link rel="icon" href="../../favicon.ico">
 
-		<title>LOGIN</title>
+		<title><?php echo $login; ?></title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +36,7 @@
 
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-4 text">
-				<h1><strong>ZZ_Agenda  </strong><?php echo $loginForm ?></h1>
+				<h1><strong>ZZ_Agenda  </strong><?php echo $loginForm; ?></h1>
 			</div>
 		</div>
 
@@ -45,12 +46,12 @@
 				<input type="text" name="login" id="login" class="form-control" placeholder="<?php echo $saisirLogin ?>" required>
 				<label for="password" class="sr-only">Password</label>
 				<input type="text" name="password" class="form-control"  placeholder="<?php echo $saisirMdp ?>" required>
-				<div class="checkbox">
+				<!--<div class="checkbox">
 					<label>
-						<input type="checkbox" value="remember-me"> <?php echo $RememberMe ?>
+						<input type="checkbox" value="remember-me"> <?php echo $RememberMe; ?>
 					</label>
-				</div> 
-				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit" onclick='rememberLogin()'><?php echo $Login ?></button>
+				</div> -->
+				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit" onclick='rememberLogin()'><?php echo $login; ?></button>
 			</form>
 
 		</div>
@@ -68,7 +69,7 @@
 				var expires = "expires="+ d.toUTCString();
 				document.cookie = "login=" + document.getElementById("login").value + ";"; + expires;
 			}
-			// From https://www.w3schools.com/js/js_cookies.asp  : return the value of the 'cname' cookie
+			// From https://www.w3schools.com/js/js_cookies.asp  : return the value of the 'cname' cookie (extract it from the string)
 			function getCookie(cname)
 			{
 				var name = cname + "=";
@@ -89,7 +90,6 @@
 				return "";
 			}
 			
-			var s = document.cookie;
 			document.getElementById("login").value = getCookie("login");
 		</script>
 

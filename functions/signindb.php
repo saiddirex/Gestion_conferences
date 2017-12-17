@@ -18,7 +18,7 @@
 	}
 	
 
-	if(checkArg($_fname) && checkArg($_name) && checkArg($_email) && checkArg($_pwd) && checkArg($_login))
+	if(checkArgs(array($_fname, $_name, $_email, $_pwd, $_login)))
 	{
 		$_id = hash("sha1", $_email);
 		$xml = simplexml_load_file("../db/users.xml");

@@ -3,9 +3,15 @@
 
 <?php
 	session_start();
+	include_once("../functions/functions.php");
+	
+	requireAdmin();
+	
 	$load_xml = simplexml_load_file('../db/conference.xml');
 	$obj_xml = new SimpleXMLElement($load_xml->asXML());
 	
+	
+	// Search for the conference to delete
 	foreach ($obj_xml->conference as $conference)
 	{  
 		if ($conference['id'] == $_GET['id'])

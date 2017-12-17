@@ -1,3 +1,4 @@
+<!-- Header -->
 <?php
 
 	if (!isset($_GET["lang"]))
@@ -27,27 +28,27 @@
 			<ul class="navbar-nav mr-auto">
 				<?php if (isset($_SESSION["connecte"])){?>
 					<li class="nav-item">
-						<a class="nav-link" href="home.php?lang=<?php echo $_SESSION['lang']; ?>"><?php echo $pagePricipal ?></a>
+						<a class="nav-link" href="home.php?lang=<?php echo $_SESSION['lang']; ?>"><?php echo $pagePricipal; ?></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://www.google.fr/maps/@45.7572147,3.1131139,15z?hl=fr"><?php echo $carte ?></a>
+						<a class="nav-link" href="https://www.google.fr/maps/@45.7572147,3.1131139,15z?hl=fr"><?php echo $carte; ?></a>
 					</li>
 					<?php if(isset($_SESSION["admin"])){ ?>
 						<li class="nav-item">
-							<a class="nav-link" href="administration.php?lang=<?php echo $_SESSION['lang']; ?>"><?php echo $administration ?></a>
+							<a class="nav-link" href="administration.php?lang=<?php echo $_SESSION['lang']; ?>"><?php echo $administration; ?></a>
 						</li>
 					<?php } ?>
 				<?php } ?>
 				<li class="dropdown , nav-item">
-					<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#"><?php echo $Language ?> </a>
+					<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#"><?php echo $Language; ?> </a>
 					<ul class="dropdown-menu">
-						<li><a href="?lang=fr"><?php echo $Francais ?></a></li>
-						<li><a href="?lang=en"><?php echo $Anglais ?></a></li>                    
+						<li><a href="?lang=fr"><?php echo $Francais; ?></a></li>
+						<li><a href="?lang=en"><?php echo $Anglais; ?></a></li>                    
 					</ul>
 				</li>				
 				<?php if (isset($_SESSION["connecte"])){?>
 					<li>
-						<a class="nav-link" href="../functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter ?></strong></a>
+						<a class="nav-link" href="../functions/logout.php?lang=<?php echo $_SESSION['lang']; ?>"><strong><?php echo $seDeconnecter; ?></strong></a>
 					</li>
 				<?php } ?>
             </ul>

@@ -10,10 +10,12 @@
 		
 		if( isUser(getVar('login'), getVar('password')) )
 		{
-			// Créé la variable. Valeurs inutiles
+			// Create the variable(s). Value is useless
+			// User is connected
 			$_SESSION['connecte'] = 0;
 			if( isAdmin(getVar('login'), getVar('password')) )
 			{
+				// User is an admin
 				$_SESSION['admin'] = 0;
 				header('Location: ../pages/administration.php');
 			}

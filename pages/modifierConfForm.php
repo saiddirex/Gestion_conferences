@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This page allows an admin user to modify a conference -->
 <html lang="en">
   <head>
 	<meta charset="utf-8">
@@ -7,7 +8,7 @@
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
 
-	<title>Modifier conférence</title>
+	<title><?php echo $modifierConference; ?></title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -22,11 +23,12 @@
 
 	<body>
 
-	<!-- Fixed navbar -->
 	<?php
 		session_start();
 		include("header.php");
 		include_once("../functions/functions.php");
+		
+		requireAdmin();
 		
 		$load_xml = simplexml_load_file('../db/conference.xml');
 		$obj_xml = new SimpleXMLElement($load_xml->asXML());
@@ -41,49 +43,50 @@
 			<div class="col-sm-10 offset-sm-1">
 				<div class="form-area">	 
 					<?php foreach ($obj_xml->conference as $conference)
-					{  
+					{
+						// Search for the desired conference to modify
 						if ($conference['id'] == $_GET['id'])
 						{
 							$datetime = DateTime::createFromFormat(DATE_ATOM, $conference->datetime);
 						?>
 							<form role="form" action="../functions/modifierConf.php" method="post">
 								<br style="clear:both">
-								<h2 style="margin-bottom: 25px ;text-align: center ;"> <strong><?php echo $modifierConference ?></strong></h2>
+								<h2 style="margin-bottom: 25px ;text-align: center ;"> <strong><?php echo $modifierConference; ?></strong></h2>
 								
 								<div class="form-group">
-									<input type="text" class="form-control" id="id" name="id" value="<?php echo $conference['id']; ?> " required  readonly hidden>
+									<input type="text" class="form-control" id="id" name="id" value="<?php echo $conference['id']; ?> " required readonly hidden>
 								</div>
 								<div class="form-group">
-									<label for="titreFr"> <?php echo $titreFr; ?> </label>
-									<input type="text" class="form-control" id="titreFr" name="titreFr"	 value="<?php echo $conference->titreFr; ?> " required>	 
+									<label for="titleFr"> <?php echo $titleFr; ?> </label>
+									<input type="text" class="form-control" id="titleFr" name="titleFr"	 value="<?php echo $conference->titleFr; ?> " required>	 
 								</div>
 								<div class="form-group">
-									<label for="titreEn"> <?php echo $titreEn; ?> </label>
-									<input type="text" class="form-control" id="titreEn" name="titreEn"	 value="<?php echo $conference->titreEn; ?> " required>	 
+									<label for="titleEn"> <?php echo $titleEn; ?> </label>
+									<input type="text" class="form-control" id="titleEn" name="titleEn"	 value="<?php echo $conference->titleEn; ?> " required>	 
 								</div>
 								<div class="form-group">
-									<label for="resumeFr"><?php echo $resume . " FR" ?> </label>
-									<textarea class="form-control" id="resumeFr" name="resumeFr" required> <?php echo $conference->resumeFr; ?> </textarea>
+									<label for="descFr"><?php echo $resume . " FR"; ?> </label>
+									<textarea class="form-control" id="descFr" name="descFr" required> <?php echo $conference->descFr; ?> </textarea>
 								</div>
 								<div class="form-group">
-									<label for="resumeEn"><?php echo $resume . " EN" ?> </label>
-									<textarea class="form-control" id="resumeEn" name="resumeEn" required> <?php echo $conference->resumeEn; ?> </textarea>
+									<label for="descEn"><?php echo $resume . " EN"; ?> </label>
+									<textarea class="form-control" id="descEn" name="descEn" required> <?php echo $conference->descEn; ?> </textarea>
 								</div>
 								<div class="form-group">
 									<label for="lieu"> <?php echo $lieu; ?> </label>
-									<input type="text" class="form-control" id="lieu" name="lieu" value="<?php echo $conference->localisation; ?> " required>
+									<input type="text" class="form-control" id="lieu" name="lieu" value="<?php echo $conference->location; ?> " required>
 								</div>
 								<div class="form-group">
-									<label for="intervenant"> <?php echo $nomIntervenant ;?></label>
-									<input type="text" class="form-control" id="intervenant" name="intervenant" value="<?php echo $conference->intervenant; ?> " required>
+									<label for="speaker"> <?php echo $nomIntervenant; ?></label>
+									<input type="text" class="form-control" id="speaker" name="speaker" value="<?php echo $conference->speaker; ?> " required>
 								</div>
 								<div class="form-group">
-									<label for="date"> <?php echo $date ?> </label>
-									<input type="date" class="form-control" id="date" name="date" value="<?php echo $datetime->format("Y-m-d");?>" required>
+									<label for="date"> <?php echo $date; ?> </label>
+									<input type="date" class="form-control" id="date" name="date" value="<?php echo $datetime->format("Y-m-d"); ?>" required>
 								</div>
 								<div class="form-group">
-									<label for="horaire"><?php echo $horaire ?> </label>
-									<input type="time" class="form-control" id="horaire" name="horaire" value="<?php echo $datetime->format("H:i");?>" required>
+									<label for="horaire"><?php echo $horaire; ?> </label>
+									<input type="time" class="form-control" id="horaire" name="horaire" value="<?php echo $datetime->format("H:i"); ?>" required>
 								</div>
 							
 							<?php
