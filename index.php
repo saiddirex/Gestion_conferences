@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <!-- Welcome page. Available for everyone -->
+<!--coordonnee de connexion 
+compte administrateur   login=admin  mdp=admin
+compte utilisateur   login=notadmin   mdp=notadmin-->
 <html lang="en">
 
 	<head>
